@@ -2,11 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Clock } from "lucide-react";
 import type { TrackEvent } from "@/types";
-import { EVENT_CATEGORY_LABEL, getTrackById } from "@/lib/data";
+import { EVENT_CATEGORY_LABEL, getTrackById, getUserById } from "@/lib/data";
 import { Badge } from "@/components/ui/Badge";
 import { RSVPButton } from "@/components/events/RSVPButton";
 import { StackedAvatars } from "@/components/ui/Avatar";
-import { getUserById } from "@/lib/data";
 import { formatDate, formatTime, formatPrice } from "@/lib/utils";
 
 export function EventSheetContent({ event }: { event: TrackEvent }) {

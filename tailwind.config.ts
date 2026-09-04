@@ -55,7 +55,10 @@ const config: Config = {
         caption: ["12px", { lineHeight: "16px", fontWeight: "400" }],
       },
       transitionTimingFunction: {
-        "ease-out-fast": "cubic-bezier(0.16, 1, 0.3, 1)",
+        // Generates the `ease-out-fast` utility (Tailwind prefixes this
+        // key with `ease-`) used throughout for the 150-200ms, no-bounce
+        // motion spec.
+        "out-fast": "cubic-bezier(0.16, 1, 0.3, 1)",
       },
       transitionDuration: {
         150: "150ms",
