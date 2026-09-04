@@ -4,15 +4,21 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronLeft, Globe, Instagram, MapPin, Youtube } from "lucide-react";
+import { ChevronLeft, ChevronRight, Globe, Instagram, MapPin, Youtube } from "lucide-react";
 import type { User } from "@/types";
 import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
 import { formatMemberSince } from "@/lib/utils";
 
+interface ProfileStat {
+  label: string;
+  value: string | number;
+  href?: string;
+}
+
 interface ProfileCoverHeroProps {
   user: User;
-  stats: { label: string; value: string | number }[];
+  stats: ProfileStat[];
   isOwnProfile: boolean;
 }
 
@@ -93,12 +99,26 @@ export function ProfileCoverHero({ user, stats, isOwnProfile }: ProfileCoverHero
         )}
 
         <div className="mt-5 flex w-full items-stretch justify-around rounded-card border border-border bg-surface-1 py-4 shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
-          {stats.map((s) => (
-            <div key={s.label} className="flex flex-col items-center gap-0.5">
-              <span className="font-display text-heading text-text-primary">{s.value}</span>
-              <span className="text-caption text-text-muted">{s.label}</span>
-            </div>
-          ))}
+          {stats.map((s) =>
+            s.href ? (
+              <Link
+                key={s.label}
+                href={s.href}
+                className="group flex flex-col items-center gap-0.5 transition-opacity duration-150 hover:opacity-70"
+              >
+                <span className="flex items-center gap-0.5 font-display text-heading text-text-primary">
+                  {s.value}
+                  <ChevronRight size={13} strokeWidth={2} className="text-text-muted transition-transform duration-150 group-hover:translate-x-0.5" />
+                </span>
+                <span className="text-caption text-text-muted">{s.label}</span>
+              </Link>
+            ) : (
+              <div key={s.label} className="flex flex-col items-center gap-0.5">
+                <span className="font-display text-heading text-text-primary">{s.value}</span>
+                <span className="text-caption text-text-muted">{s.label}</span>
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>

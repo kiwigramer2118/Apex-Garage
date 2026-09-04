@@ -371,7 +371,7 @@ function EventCardBody({ event }: { event: TrackEvent }) {
       <div className="flex flex-col gap-2.5 px-3.5 pb-3.5">
         <div className="flex items-center gap-1.5">
           <Badge tone="accent">{EVENT_CATEGORY_LABEL[event.category]}</Badge>
-          {event.isLive && <Badge tone="success">● En vivo</Badge>}
+          {event.isLive && <Badge tone="success">● Live</Badge>}
         </div>
         <p className="line-clamp-2 font-display text-heading text-text-primary">{event.title}</p>
         <div className="flex items-center gap-1.5 text-caption text-text-secondary">
@@ -450,7 +450,7 @@ function CarCardBody({ car, owner }: { car: Car; owner: ReturnType<typeof getUse
           </Link>
           {owner && (
             <Link
-              href={`/profile/${owner.id}`}
+              href={`/garage/${owner.id}`}
               className="flex-1 rounded-button border border-border py-2.5 text-center text-caption text-text-primary transition-colors duration-150 hover:bg-surface-2"
             >
               View garage

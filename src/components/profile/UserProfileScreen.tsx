@@ -1,29 +1,30 @@
 import { notFound } from "next/navigation";
-import { Bell, Images, Lock, LogOut, ChevronRight, Users } from "lucide-react";
-import { getUserById, getCarsByOwner, getFeaturedCar, getEventsAttendedBy, getActivityForUser, CURRENT_USER_ID } from "@/lib/data";
+import { Bell, Images, Link2, Lock, LogOut, ChevronRight, Users } from "lucide-react";
+import { getUserById, getCarsByOwner, getEventsAttendedBy, getActivityForUser, CURRENT_USER_ID } from "@/lib/data";
 import { ProfileCoverHero } from "./ProfileCoverHero";
-import { GarageSection } from "@/components/cars/GarageSection";
 import { EventsAttendedList } from "./EventsAttendedList";
 import { ActivityFeed } from "./ActivityFeed";
 import { GalleryLightbox } from "@/components/cars/GalleryLightbox";
 
 const SETTINGS = [
   { icon: Bell, label: "Notifications" },
+  { icon: Link2, label: "Connected accounts" },
   { icon: Lock, label: "Privacy" },
   { icon: LogOut, label: "Log out" },
 ];
 
-// The single Profile + Garage screen — a Garage is a section of a Profile,
-// never a separate entity, per spec. Used both for "my" profile (own tabs)
-// and for viewing any other member's profile (car pins on the map, event
-// hosts, listing sellers).
+// The Profile screen — identity and account hub only. The car collection
+// lives exclusively on the Garage screen (GarageScreen.tsx); this screen
+// only ever surfaces a tappable "cars" count that links there, never the
+// grid itself, so the two tabs never duplicate content. Used both for "my"
+// profile (own tabs) and for viewing any other member's profile (car pins
+// on the map, event hosts, listing sellers).
 export function UserProfileScreen({ userId }: { userId: string }) {
   const user = getUserById(userId);
   if (!user) notFound();
 
   const isOwnProfile = user.id === CURRENT_USER_ID;
   const myCars = getCarsByOwner(user.id);
-  const featuredCar = getFeaturedCar(user);
   const attendedEvents = getEventsAttendedBy(user.id);
   const activity = getActivityForUser(user.id);
 
@@ -33,21 +34,13 @@ export function UserProfileScreen({ userId }: { userId: string }) {
         user={user}
         isOwnProfile={isOwnProfile}
         stats={[
-          { label: "Cars", value: myCars.length },
+          { label: "Cars", value: myCars.length, href: isOwnProfile ? "/garage" : `/garage/${user.id}` },
           { label: "Followers", value: user.followerCount },
           { label: "Following", value: user.followingCount },
         ]}
       />
 
       <div className="mx-auto max-w-2xl px-5">
-        <section className="mt-8">
-          <div className="mb-3 flex items-center justify-between">
-            <h2 className="text-heading text-text-primary">Garage</h2>
-            {featuredCar && <span className="text-caption text-text-muted">{featuredCar.nickname} featured</span>}
-          </div>
-          <GarageSection cars={myCars} featuredCarId={user.featuredCarId} />
-        </section>
-
         {user.communities.length > 0 && (
           <section className="mt-8">
             <div className="mb-3 flex items-center gap-2">

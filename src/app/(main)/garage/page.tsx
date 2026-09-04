@@ -1,8 +1,8 @@
 import { CURRENT_USER_ID } from "@/lib/data";
-import { UserProfileScreen } from "@/components/profile/UserProfileScreen";
+import { GarageScreen } from "@/components/cars/GarageScreen";
 
-// Garage is a section of a Profile, not a separate entity — the bottom-tab
-// shortcut lands on the same unified screen as /profile.
+// Garage is its own tab — car collection only. Profile (identity + account)
+// lives at /profile; the two never render duplicate content.
 export default function GaragePage() {
-  return <UserProfileScreen userId={CURRENT_USER_ID} />;
+  return <GarageScreen userId={CURRENT_USER_ID} />;
 }
