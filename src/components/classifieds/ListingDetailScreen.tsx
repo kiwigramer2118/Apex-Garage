@@ -86,11 +86,13 @@ export function ListingDetailScreen({ listingId }: { listingId: string }) {
         <div className="mt-6">
           <h2 className="mb-2 text-heading text-text-primary">Vendedor</h2>
           <div className="flex items-center gap-3 rounded-card border border-border bg-surface-1 p-3 shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
-            <Avatar src={seller.avatar} alt={seller.name} size={40} />
-            <div className="flex-1">
-              <p className="text-body text-text-primary">{seller.name}</p>
-              <p className="text-caption text-text-muted">@{seller.handle}</p>
-            </div>
+            <Link href={`/profile/${seller.id}`} className="flex flex-1 items-center gap-3">
+              <Avatar alt={seller.name} size={40} />
+              <div className="flex-1">
+                <p className="text-body text-text-primary">{seller.name}</p>
+                <p className="text-caption text-text-muted">@{seller.handle}</p>
+              </div>
+            </Link>
             {car && (
               <Link href={`/cars/${car.id}`} className="text-caption text-accent underline underline-offset-2">
                 Ver su {car.model}

@@ -32,6 +32,24 @@ export function getCarsByOwner(ownerId: string): Car[] {
   return cars.filter((c) => c.ownerId === ownerId);
 }
 
+// The car a profile leads with — the user's explicit pick when set, falling
+// back to whatever their first car is so a profile never has an empty
+// "featured" slot as long as they own at least one car.
+export function getFeaturedCar(user: User): Car | undefined {
+  const owned = getCarsByOwner(user.id);
+  if (user.featuredCarId) {
+    const featured = owned.find((c) => c.id === user.featuredCarId);
+    if (featured) return featured;
+  }
+  return owned[0];
+}
+
+export function getEventsAttendedBy(userId: string): TrackEvent[] {
+  return events
+    .filter((e) => e.attendeeIds.includes(userId))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
 export function getTrackById(id: string): Track | undefined {
   return tracks.find((t) => t.id === id);
 }
@@ -78,4 +96,10 @@ export const LISTING_CONDITION_LABEL: Record<string, string> = {
   "like-new": "Like New",
   used: "Used",
   "for-parts": "For Parts",
+};
+
+export const CAR_STATUS_LABEL: Record<string, string> = {
+  current: "Actual",
+  project: "Proyecto",
+  sold: "Histórico",
 };

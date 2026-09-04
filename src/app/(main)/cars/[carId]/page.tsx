@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { Gauge, Timer } from "lucide-react";
 import { cars, getCarById, getUserById, getTrackById } from "@/lib/data";
 import { CarHero } from "@/components/cars/CarHero";
@@ -24,13 +25,13 @@ export default function CarProfilePage({ params }: { params: { carId: string } }
       <div className="mx-auto max-w-2xl px-5 pt-5">
         <div className="mb-6 flex items-center justify-between gap-4 rounded-card border border-border bg-surface-1 p-4">
           {owner && (
-            <div className="flex items-center gap-3">
-              <Avatar src={owner.avatar} alt={owner.name} size={40} />
+            <Link href={`/profile/${owner.id}`} className="flex items-center gap-3">
+              <Avatar alt={owner.name} size={40} />
               <div>
                 <p className="text-body text-text-primary">{owner.name}</p>
                 <p className="text-caption text-text-muted">@{owner.handle}</p>
               </div>
-            </div>
+            </Link>
           )}
           {car.bestLapTime ? (
             <div className="text-right">

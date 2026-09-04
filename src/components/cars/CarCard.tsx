@@ -1,8 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Star } from "lucide-react";
 import type { Car } from "@/types";
+import { CAR_STATUS_LABEL } from "@/lib/data";
 
-export function CarCard({ car }: { car: Car }) {
+const STATUS_TONE: Record<Car["status"], string> = {
+  current: "bg-success/15 text-success",
+  project: "bg-accent-subtle text-accent",
+  sold: "bg-surface-3 text-text-secondary",
+};
+
+export function CarCard({ car, featured }: { car: Car; featured?: boolean }) {
   return (
     <Link
       href={`/cars/${car.id}`}
@@ -16,6 +24,19 @@ export function CarCard({ car }: { car: Car }) {
         sizes="256px"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/5 to-transparent" />
+
+      <div className="absolute left-3 top-3 flex items-center gap-1.5">
+        <span className={`rounded-pill px-2.5 py-1 text-caption ${STATUS_TONE[car.status]}`}>
+          {CAR_STATUS_LABEL[car.status]}
+        </span>
+        {featured && (
+          <span className="flex items-center gap-1 rounded-pill bg-surface-1/85 px-2.5 py-1 text-caption text-text-secondary backdrop-blur-sm">
+            <Star size={11} className="fill-accent text-accent" />
+            Destacado
+          </span>
+        )}
+      </div>
+
       <div className="relative p-4">
         <p className="text-caption uppercase tracking-wide text-text-muted">
           {car.year} · {car.chassisCode}

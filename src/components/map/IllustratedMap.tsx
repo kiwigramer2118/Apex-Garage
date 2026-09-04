@@ -6,7 +6,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Car as CarIcon, Clock, Compass, MapPin, Minus, Plus, RotateCcw } from "lucide-react";
 import type { Car, TrackEvent } from "@/types";
-import { cars, getUserById, tracks, EVENT_CATEGORY_LABEL } from "@/lib/data";
+import { cars, getUserById, tracks, EVENT_CATEGORY_LABEL, CAR_STATUS_LABEL } from "@/lib/data";
 import { CITY_COORDS, makeProjector } from "@/lib/geo";
 import { CATEGORY_COLOR } from "./EventPin";
 import { FloatingMapCard } from "./FloatingMapCard";
@@ -367,17 +367,22 @@ function CarCardBody({ car, owner }: { car: Car; owner: ReturnType<typeof getUse
         <div className="absolute inset-0 bg-gradient-to-t from-surface-1 via-surface-1/10 to-transparent" />
       </div>
       <div className="flex flex-col gap-2.5 px-3.5 pb-3.5">
-        <p className="text-[10px] uppercase tracking-wide text-text-muted">
-          {car.year} · {car.chassisCode}
-        </p>
+        <div className="flex items-center gap-1.5">
+          <p className="text-[10px] uppercase tracking-wide text-text-muted">
+            {car.year} · {car.chassisCode}
+          </p>
+          <Badge tone={car.status === "current" ? "success" : car.status === "project" ? "accent" : "muted"}>
+            {CAR_STATUS_LABEL[car.status]}
+          </Badge>
+        </div>
         <p className="font-display text-heading text-text-primary">
           {car.make} {car.model}
         </p>
         {owner && (
-          <div className="flex items-center gap-2">
+          <Link href={`/profile/${owner.id}`} className="flex items-center gap-2">
             <Avatar alt={owner.name} size={22} />
-            <span className="text-caption text-text-secondary">{owner.name}</span>
-          </div>
+            <span className="text-caption text-text-secondary underline-offset-2 hover:underline">{owner.name}</span>
+          </Link>
         )}
         {car.bestLapTime && car.bestLapTrackId && (
           <div className="flex items-center gap-1.5 text-caption text-text-secondary">
@@ -387,12 +392,22 @@ function CarCardBody({ car, owner }: { car: Car; owner: ReturnType<typeof getUse
             </span>
           </div>
         )}
-        <Link
-          href={`/cars/${car.id}`}
-          className="mt-1 rounded-button bg-accent py-2.5 text-center text-caption text-bg transition-colors duration-150 hover:bg-accent-hover"
-        >
-          Ver garage
-        </Link>
+        <div className="mt-1 flex gap-2">
+          <Link
+            href={`/cars/${car.id}`}
+            className="flex-1 rounded-button bg-accent py-2.5 text-center text-caption text-bg transition-colors duration-150 hover:bg-accent-hover"
+          >
+            Ver auto
+          </Link>
+          {owner && (
+            <Link
+              href={`/profile/${owner.id}`}
+              className="flex-1 rounded-button border border-border py-2.5 text-center text-caption text-text-primary transition-colors duration-150 hover:bg-surface-2"
+            >
+              Ver garage
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

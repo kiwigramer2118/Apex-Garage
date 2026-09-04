@@ -51,6 +51,11 @@ export interface CarModCategory {
   items: string[];
 }
 
+// Actual = daily/track driver right now. Proyecto = mid-build. Histórico =
+// past build the owner chooses to keep documented rather than delete —
+// identity/trajectory, not a database of only what's currently owned.
+export type CarStatus = "current" | "project" | "sold";
+
 export interface Car {
   id: string;
   ownerId: string;
@@ -65,6 +70,13 @@ export interface Car {
   mods: CarModCategory[];
   bestLapTrackId: TrackId | null;
   bestLapTime: string | null;
+  status: CarStatus;
+}
+
+export interface SocialLinks {
+  instagram?: string;
+  youtube?: string;
+  website?: string;
 }
 
 export interface User {
@@ -72,9 +84,15 @@ export interface User {
   handle: string;
   name: string;
   avatar: string;
+  coverImage: string;
   location: string;
   bio: string;
   memberSince: string;
+  role: string | null;
+  socialLinks: SocialLinks;
+  communities: string[];
+  featuredCarId: string | null;
+  galleryImages: string[];
   carIds: string[];
   followerCount: number;
   followingCount: number;

@@ -84,7 +84,7 @@ export function EventDetailScreen({ eventId }: { eventId: string }) {
 
         {host && (
           <Link
-            href="#"
+            href={`/profile/${host.id}`}
             className="mt-4 flex items-center gap-3 rounded-card border border-border bg-surface-1 p-3 shadow-[0_4px_20px_rgba(0,0,0,0.2)] transition-colors duration-150 hover:border-text-muted/40"
           >
             <Avatar src={host.avatar} alt={host.name} size={40} />

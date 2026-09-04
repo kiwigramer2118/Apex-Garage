@@ -56,7 +56,8 @@
       }
     ],
     "bestLapTrackId": "willow-springs",
-    "bestLapTime": "1:24.310"
+    "bestLapTime": "1:24.310",
+    "status": "current"
   },
   {
     "id": "c2",
@@ -113,7 +114,8 @@
       }
     ],
     "bestLapTrackId": "chuckwalla",
-    "bestLapTime": "1:52.940"
+    "bestLapTime": "1:52.940",
+    "status": "current"
   },
   {
     "id": "c3",
@@ -163,7 +165,8 @@
       }
     ],
     "bestLapTrackId": "buttonwillow",
-    "bestLapTime": "1:58.220"
+    "bestLapTime": "1:58.220",
+    "status": "current"
   },
   {
     "id": "c4",
@@ -211,7 +214,8 @@
       }
     ],
     "bestLapTrackId": null,
-    "bestLapTime": null
+    "bestLapTime": null,
+    "status": "project"
   },
   {
     "id": "c5",
@@ -261,7 +265,8 @@
       }
     ],
     "bestLapTrackId": "buttonwillow",
-    "bestLapTime": "1:52.005"
+    "bestLapTime": "1:52.005",
+    "status": "current"
   },
   {
     "id": "c6",
@@ -309,7 +314,8 @@
       }
     ],
     "bestLapTrackId": "chuckwalla",
-    "bestLapTime": "2:01.610"
+    "bestLapTime": "2:01.610",
+    "status": "current"
   },
   {
     "id": "c7",
@@ -358,7 +364,8 @@
       }
     ],
     "bestLapTrackId": "willow-springs",
-    "bestLapTime": "1:21.740"
+    "bestLapTime": "1:21.740",
+    "status": "project"
   },
   {
     "id": "c8",
@@ -406,6 +413,55 @@
       }
     ],
     "bestLapTrackId": null,
-    "bestLapTime": null
+    "bestLapTime": null,
+    "status": "project"
+  },
+  {
+    "id": "c9",
+    "ownerId": "u8",
+    "make": "Honda",
+    "model": "Civic Type R",
+    "chassisCode": "EK9",
+    "year": 1998,
+    "nickname": "First Love",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/1997_Honda_Civic_Type_R_EK9.jpg?width=1600",
+    "gallery": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Honda_Civic_EK4.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/EK9_Honda_Civic_Type_R_IMG_7754.jpg?width=1200"
+    ],
+    "specs": {
+      "power": "182 hp @ 8,200 rpm",
+      "weight": "2,271 lb",
+      "drivetrain": "FF",
+      "transmission": "5-speed manual",
+      "tires": "Yokohama Advan Neova AD08 205/50R15",
+      "suspension": "OEM+ with Cusco sway bars"
+    },
+    "mods": [
+      {
+        "category": "Suspension",
+        "items": [
+          "Cusco front/rear sway bars",
+          "OEM Type R springs (kept OEM+)"
+        ]
+      },
+      {
+        "category": "Wheels & Brakes",
+        "items": [
+          "OEM Type R alloys, refinished",
+          "Project Mu brake pads"
+        ]
+      },
+      {
+        "category": "Interior",
+        "items": [
+          "Recaro-style OEM Type R buckets",
+          "Momo shift knob"
+        ]
+      }
+    ],
+    "bestLapTrackId": "buttonwillow",
+    "bestLapTime": "2:08.410",
+    "status": "sold"
   }
 ]
