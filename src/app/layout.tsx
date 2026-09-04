@@ -18,7 +18,7 @@ const ui = Manrope({
 
 export const metadata: Metadata = {
   title: "Apex Garage",
-  description: "A digital garage for the SoCal track scene — live event map, vehicle profiles, and classifieds.",
+  description: "Garage digital para la escena de track de SoCal — mapa de eventos en vivo, perfiles de vehículos y clasificados.",
 };
 
 export const viewport: Viewport = {
@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${ui.variable}`}>
+    <html lang="es" className={`${display.variable} ${ui.variable}`}>
       <body>{children}</body>
     </html>
   );
