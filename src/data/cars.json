@@ -1,0 +1,247 @@
+[
+  {
+    "id": "c1",
+    "ownerId": "u1",
+    "make": "BMW",
+    "model": "M3",
+    "chassisCode": "E46",
+    "year": 2003,
+    "nickname": "Steel Grey Wolf",
+    "heroImage": "https://picsum.photos/seed/e46-hero/1600/1000",
+    "gallery": [
+      "https://picsum.photos/seed/e46-g1/1200/800",
+      "https://picsum.photos/seed/e46-g2/1200/800",
+      "https://picsum.photos/seed/e46-g3/1200/800",
+      "https://picsum.photos/seed/e46-g4/1200/800"
+    ],
+    "specs": {
+      "power": "343 hp @ 7,900 rpm",
+      "weight": "3,175 lb",
+      "drivetrain": "FR",
+      "transmission": "6-speed manual",
+      "tires": "Michelin Pilot Sport Cup 2 255/35R18",
+      "suspension": "KW Clubsport 3-way"
+    },
+    "mods": [
+      { "category": "Suspension", "items": ["KW Clubsport 3-way coilovers", "Vorshlag camber plates", "Powerflex full bushing kit"] },
+      { "category": "Wheels & Brakes", "items": ["Apex ARC-8 18x9.5 / 18x10.5", "StopTech ST-60 big brake kit", "Motul RBF660 fluid"] },
+      { "category": "Engine", "items": ["Supersprint headers", "Custom velocity stacks", "Setrab oil cooler"] },
+      { "category": "Exterior", "items": ["CSL-style trunk", "Voltex front lip", "Carbon mirror caps"] }
+    ],
+    "bestLapTrackId": "willow-springs",
+    "bestLapTime": "1:24.310"
+  },
+  {
+    "id": "c2",
+    "ownerId": "u2",
+    "make": "Mazda",
+    "model": "MX-5 Miata",
+    "chassisCode": "NB",
+    "year": 2000,
+    "nickname": "Kimchi Rocket",
+    "heroImage": "https://picsum.photos/seed/nb-hero/1600/1000",
+    "gallery": [
+      "https://picsum.photos/seed/nb-g1/1200/800",
+      "https://picsum.photos/seed/nb-g2/1200/800",
+      "https://picsum.photos/seed/nb-g3/1200/800"
+    ],
+    "specs": {
+      "power": "128 hp @ 6,500 rpm",
+      "weight": "2,340 lb",
+      "drivetrain": "FR",
+      "transmission": "5-speed manual",
+      "tires": "Falken RT660 205/45R16",
+      "suspension": "Öhlins DFV coilovers"
+    },
+    "mods": [
+      { "category": "Suspension", "items": ["Öhlins DFV coilovers", "Flyin' Miata sway bars", "Solid subframe bushings"] },
+      { "category": "Wheels & Brakes", "items": ["Enkei RPF1 15x9", "Wilwood front calipers"] },
+      { "category": "Weight", "items": ["Hardtop delete", "Carbon fiber trunk", "Stripped rear seat delete (N/A, roadster)"] },
+      { "category": "Exterior", "items": ["Garage Vary front bumper", "Voodoo Racing wing"] }
+    ],
+    "bestLapTrackId": "chuckwalla",
+    "bestLapTime": "1:52.940"
+  },
+  {
+    "id": "c3",
+    "ownerId": "u3",
+    "make": "Honda",
+    "model": "S2000",
+    "chassisCode": "AP2",
+    "year": 2007,
+    "nickname": "Berlina Bee",
+    "heroImage": "https://picsum.photos/seed/ap2-hero/1600/1000",
+    "gallery": [
+      "https://picsum.photos/seed/ap2-g1/1200/800",
+      "https://picsum.photos/seed/ap2-g2/1200/800",
+      "https://picsum.photos/seed/ap2-g3/1200/800",
+      "https://picsum.photos/seed/ap2-g4/1200/800"
+    ],
+    "specs": {
+      "power": "237 hp @ 7,800 rpm",
+      "weight": "2,865 lb",
+      "drivetrain": "FR",
+      "transmission": "6-speed manual",
+      "tires": "Bridgestone RE-71RS 255/40R17",
+      "suspension": "BC Racing BR Series"
+    },
+    "mods": [
+      { "category": "Suspension", "items": ["BC Racing BR coilovers", "Spoon rigid collars", "Cusco front strut bar"] },
+      { "category": "Wheels & Brakes", "items": ["Volk TE37 17x9", "Endless MX72 pads"] },
+      { "category": "Engine", "items": ["Spoon N1 exhaust", "AP1 6-speed swap", "Password:JDM intake"] }
+    ],
+    "bestLapTrackId": "buttonwillow",
+    "bestLapTime": "1:58.220"
+  },
+  {
+    "id": "c4",
+    "ownerId": "u4",
+    "make": "Subaru",
+    "model": "WRX STI",
+    "chassisCode": "VA",
+    "year": 2019,
+    "nickname": "Blue Peak",
+    "heroImage": "https://picsum.photos/seed/sti-hero/1600/1000",
+    "gallery": [
+      "https://picsum.photos/seed/sti-g1/1200/800",
+      "https://picsum.photos/seed/sti-g2/1200/800",
+      "https://picsum.photos/seed/sti-g3/1200/800"
+    ],
+    "specs": {
+      "power": "310 hp @ 6,000 rpm",
+      "weight": "3,461 lb",
+      "drivetrain": "AWD",
+      "transmission": "6-speed manual",
+      "tires": "Yokohama Advan A052 265/35R18",
+      "suspension": "Öhlins Road & Track"
+    },
+    "mods": [
+      { "category": "Suspension", "items": ["Öhlins Road & Track coilovers", "Whiteline adjustable end links"] },
+      { "category": "Drivetrain", "items": ["Cusco center diff tune", "Kartboy short shifter"] },
+      { "category": "Wheels & Brakes", "items": ["Advan Racing RS-DF 18x9.5", "DBA 5000 rotors"] }
+    ],
+    "bestLapTrackId": null,
+    "bestLapTime": null
+  },
+  {
+    "id": "c5",
+    "ownerId": "u5",
+    "make": "Honda",
+    "model": "Civic Type R",
+    "chassisCode": "FK8",
+    "year": 2021,
+    "nickname": "Champagne Problems",
+    "heroImage": "https://picsum.photos/seed/fk8-hero/1600/1000",
+    "gallery": [
+      "https://picsum.photos/seed/fk8-g1/1200/800",
+      "https://picsum.photos/seed/fk8-g2/1200/800",
+      "https://picsum.photos/seed/fk8-g3/1200/800"
+    ],
+    "specs": {
+      "power": "306 hp @ 6,500 rpm",
+      "weight": "3,117 lb",
+      "drivetrain": "FF",
+      "transmission": "6-speed manual",
+      "tires": "Michelin Pilot Sport 4S 245/30R20",
+      "suspension": "KW V3 coilovers"
+    },
+    "mods": [
+      { "category": "Suspension", "items": ["KW V3 coilovers", "Hardrace front camber bolts", "Eibach anti-roll bars"] },
+      { "category": "Engine", "items": ["PRL Motorsports intake", "Downpipe + catback", "Hondata FlashPro tune"] },
+      { "category": "Wheels & Brakes", "items": ["Konig Ampliform 19x9.5", "Brembo GT big brake kit"] }
+    ],
+    "bestLapTrackId": "buttonwillow",
+    "bestLapTime": "1:52.005"
+  },
+  {
+    "id": "c6",
+    "ownerId": "u6",
+    "make": "Toyota",
+    "model": "GR86",
+    "chassisCode": "ZN8",
+    "year": 2023,
+    "nickname": "Slow Car Fast",
+    "heroImage": "https://picsum.photos/seed/gr86-hero/1600/1000",
+    "gallery": [
+      "https://picsum.photos/seed/gr86-g1/1200/800",
+      "https://picsum.photos/seed/gr86-g2/1200/800",
+      "https://picsum.photos/seed/gr86-g3/1200/800"
+    ],
+    "specs": {
+      "power": "228 hp @ 7,000 rpm",
+      "weight": "2,811 lb",
+      "drivetrain": "FR",
+      "transmission": "6-speed manual",
+      "tires": "Bridgestone RE-71RS 255/40R17",
+      "suspension": "BC Racing BR Series"
+    },
+    "mods": [
+      { "category": "Suspension", "items": ["BC Racing BR coilovers", "Whiteline sway bar set"] },
+      { "category": "Wheels & Brakes", "items": ["Enkei RPF1 17x9", "Project Mu brake pads"] },
+      { "category": "Exterior", "items": ["OE wing delete", "Voltex-style diffuser"] }
+    ],
+    "bestLapTrackId": "chuckwalla",
+    "bestLapTime": "2:01.610"
+  },
+  {
+    "id": "c7",
+    "ownerId": "u7",
+    "make": "Toyota",
+    "model": "GR Supra",
+    "chassisCode": "A90",
+    "year": 2022,
+    "nickname": "Renaissance",
+    "heroImage": "https://picsum.photos/seed/a90-hero/1600/1000",
+    "gallery": [
+      "https://picsum.photos/seed/a90-g1/1200/800",
+      "https://picsum.photos/seed/a90-g2/1200/800",
+      "https://picsum.photos/seed/a90-g3/1200/800",
+      "https://picsum.photos/seed/a90-g4/1200/800"
+    ],
+    "specs": {
+      "power": "469 hp @ 5,800 rpm (tuned)",
+      "weight": "3,397 lb",
+      "drivetrain": "FR",
+      "transmission": "8-speed automatic",
+      "tires": "Michelin Pilot Sport 4S 275/35R19",
+      "suspension": "MCS RR1 coilovers"
+    },
+    "mods": [
+      { "category": "Engine", "items": ["Pure Turbos PURE800 upgrade", "MHD stage 2+ tune", "Downpipe + intercooler"] },
+      { "category": "Suspension", "items": ["MCS RR1 coilovers", "Whiteline rear toe arms"] },
+      { "category": "Wheels & Brakes", "items": ["BBS RI-D 19x9.5", "AP Racing big brake kit"] }
+    ],
+    "bestLapTrackId": "willow-springs",
+    "bestLapTime": "1:21.740"
+  },
+  {
+    "id": "c8",
+    "ownerId": "u8",
+    "make": "BMW",
+    "model": "M3",
+    "chassisCode": "E46",
+    "year": 2002,
+    "nickname": "Work In Progress",
+    "heroImage": "https://picsum.photos/seed/alex-e46-hero/1600/1000",
+    "gallery": [
+      "https://picsum.photos/seed/alex-e46-g1/1200/800",
+      "https://picsum.photos/seed/alex-e46-g2/1200/800",
+      "https://picsum.photos/seed/alex-e46-g3/1200/800"
+    ],
+    "specs": {
+      "power": "333 hp @ 7,900 rpm",
+      "weight": "3,415 lb",
+      "drivetrain": "FR",
+      "transmission": "6-speed manual",
+      "tires": "Continental ExtremeContact Sport 235/40R18",
+      "suspension": "Bilstein B16 PSS10"
+    },
+    "mods": [
+      { "category": "Suspension", "items": ["Bilstein B16 PSS10 coilovers", "UUC subframe reinforcement"] },
+      { "category": "Wheels & Brakes", "items": ["OEM Style 67 18\" (refinished)", "StopTech front pads"] },
+      { "category": "Interior", "items": ["Recaro Sportster CS seats", "Momo shift knob"] }
+    ],
+    "bestLapTrackId": null,
+    "bestLapTime": null
+  }
+]

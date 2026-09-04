@@ -1,0 +1,98 @@
+[
+  {
+    "id": "u1",
+    "handle": "danny.builds",
+    "name": "Danny Reyes",
+    "avatar": "https://picsum.photos/seed/danny-reyes/200/200",
+    "location": "Long Beach, CA",
+    "bio": "E46 daily, track weekends. Chasing 1:58 at Big Willow.",
+    "memberSince": "2022-03-11",
+    "carIds": ["c1"],
+    "followerCount": 412,
+    "followingCount": 128
+  },
+  {
+    "id": "u2",
+    "handle": "kimchi.miata",
+    "name": "Sarah Kim",
+    "avatar": "https://picsum.photos/seed/sarah-kim/200/200",
+    "location": "Irvine, CA",
+    "bio": "NB Miata, built for corners not straights.",
+    "memberSince": "2021-07-02",
+    "carIds": ["c2"],
+    "followerCount": 803,
+    "followingCount": 214
+  },
+  {
+    "id": "u3",
+    "handle": "s2k_marcus",
+    "name": "Marcus Bell",
+    "avatar": "https://picsum.photos/seed/marcus-bell/200/200",
+    "location": "Torrance, CA",
+    "bio": "AP2 S2000. VTEC and vibes.",
+    "memberSince": "2020-11-19",
+    "carIds": ["c3"],
+    "followerCount": 561,
+    "followingCount": 97
+  },
+  {
+    "id": "u4",
+    "handle": "wrx.wendy",
+    "name": "Wendy Park",
+    "avatar": "https://picsum.photos/seed/wendy-park/200/200",
+    "location": "San Diego, CA",
+    "bio": "STI on coilovers. Autocross most weekends.",
+    "memberSince": "2023-01-24",
+    "carIds": ["c4"],
+    "followerCount": 289,
+    "followingCount": 176
+  },
+  {
+    "id": "u5",
+    "handle": "civic_type_rick",
+    "name": "Rick Alvarado",
+    "avatar": "https://picsum.photos/seed/rick-alvarado/200/200",
+    "location": "Riverside, CA",
+    "bio": "FK8 Type R. Champagne edition. Time attack curious.",
+    "memberSince": "2022-09-08",
+    "carIds": ["c5"],
+    "followerCount": 654,
+    "followingCount": 143
+  },
+  {
+    "id": "u6",
+    "handle": "grtwins",
+    "name": "Priya Nair",
+    "avatar": "https://picsum.photos/seed/priya-nair/200/200",
+    "location": "Anaheim, CA",
+    "bio": "GR86 built slow, driven often.",
+    "memberSince": "2023-05-30",
+    "carIds": ["c6"],
+    "followerCount": 198,
+    "followingCount": 88
+  },
+  {
+    "id": "u7",
+    "handle": "supra.sean",
+    "name": "Sean Ostrander",
+    "avatar": "https://picsum.photos/seed/sean-ostrander/200/200",
+    "location": "Costa Mesa, CA",
+    "bio": "A90 Supra, single turbo project underway.",
+    "memberSince": "2021-02-14",
+    "carIds": ["c7"],
+    "followerCount": 921,
+    "followingCount": 233
+  },
+  {
+    "id": "u8",
+    "handle": "you",
+    "name": "Alex Moreno",
+    "avatar": "https://picsum.photos/seed/alex-moreno/200/200",
+    "location": "Huntington Beach, CA",
+    "bio": "E46 M3 project. Building it to drive it, not to show it.",
+    "memberSince": "2024-02-01",
+    "carIds": ["c8"],
+    "followerCount": 47,
+    "followingCount": 61
+  }
+]

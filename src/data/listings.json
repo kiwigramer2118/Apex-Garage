@@ -1,0 +1,186 @@
+[
+  {
+    "id": "l1",
+    "title": "Apex ARC-8 18x9.5 / 18x10.5 — Satin Bronze",
+    "category": "wheels",
+    "condition": "like-new",
+    "priceUsd": 1450,
+    "negotiable": true,
+    "location": "Long Beach, CA",
+    "description": "Staggered set, mounted with Michelin PS4S for one season, maybe 3,000 miles on them. No curb rash, no bends. Selling because I'm going wider. Includes TPMS sensors and lug kit.",
+    "images": [
+      "https://picsum.photos/seed/listing-arc8-1/1200/900",
+      "https://picsum.photos/seed/listing-arc8-2/1200/900",
+      "https://picsum.photos/seed/listing-arc8-3/1200/900"
+    ],
+    "sellerId": "u1",
+    "fitment": "5x120, fits E46/E9x BMW",
+    "postedAt": "2026-08-28",
+    "carId": "c1"
+  },
+  {
+    "id": "l2",
+    "title": "KW Clubsport 3-Way Coilovers — E46 M3",
+    "category": "suspension",
+    "priceUsd": 2200,
+    "negotiable": false,
+    "condition": "used",
+    "location": "Long Beach, CA",
+    "description": "Two seasons of track use, freshly rebuilt and re-valved by KW six months ago with receipts. Upgrading to a different setup for next year. Comes with spare springs.",
+    "images": [
+      "https://picsum.photos/seed/listing-kw-cs-1/1200/900",
+      "https://picsum.photos/seed/listing-kw-cs-2/1200/900"
+    ],
+    "sellerId": "u1",
+    "fitment": "BMW E46 M3 2001-2006",
+    "postedAt": "2026-08-15",
+    "carId": "c1"
+  },
+  {
+    "id": "l3",
+    "title": "Spoon N1 Catback Exhaust — S2000 AP1/AP2",
+    "category": "exhaust",
+    "priceUsd": 950,
+    "negotiable": true,
+    "condition": "used",
+    "location": "Torrance, CA",
+    "description": "Genuine Spoon N1, sounds incredible above 6k. Small dent near the tip from a curb, purely cosmetic, doesn't affect flow or sound. Comes with all hardware.",
+    "images": [
+      "https://picsum.photos/seed/listing-spoon-n1-1/1200/900",
+      "https://picsum.photos/seed/listing-spoon-n1-2/1200/900",
+      "https://picsum.photos/seed/listing-spoon-n1-3/1200/900"
+    ],
+    "sellerId": "u3",
+    "fitment": "Honda S2000 AP1/AP2",
+    "postedAt": "2026-08-30",
+    "carId": "c3"
+  },
+  {
+    "id": "l4",
+    "title": "Recaro Sportster CS Seats — Pair, Black Dinamica",
+    "category": "interior",
+    "priceUsd": 1600,
+    "negotiable": true,
+    "condition": "like-new",
+    "location": "Huntington Beach, CA",
+    "description": "Bought for a build that changed direction. Sat in a garage, never installed. Includes FIA-compliant side mount brackets, no sliders. Perfect for anyone standardizing on Recaro fitment.",
+    "images": [
+      "https://picsum.photos/seed/listing-recaro-1/1200/900",
+      "https://picsum.photos/seed/listing-recaro-2/1200/900"
+    ],
+    "sellerId": "u8",
+    "fitment": "Universal FIA side mount",
+    "postedAt": "2026-09-01",
+    "carId": "c8"
+  },
+  {
+    "id": "l5",
+    "title": "Öhlins DFV Coilovers — Miata NA/NB",
+    "category": "suspension",
+    "priceUsd": 1350,
+    "negotiable": false,
+    "condition": "used",
+    "location": "Irvine, CA",
+    "description": "Great condition, rebuilt within the last 1,500 miles. Selling as part of a Spec Miata conversion — going to a different spring rate. Set includes both front and rear.",
+    "images": [
+      "https://picsum.photos/seed/listing-ohlins-dfv-1/1200/900",
+      "https://picsum.photos/seed/listing-ohlins-dfv-2/1200/900"
+    ],
+    "sellerId": "u2",
+    "fitment": "Mazda MX-5 NA/NB 1990-2005",
+    "postedAt": "2026-08-22",
+    "carId": "c2"
+  },
+  {
+    "id": "l6",
+    "title": "Pure Turbos PURE800 Upgrade Kit — A90 Supra",
+    "category": "engine",
+    "priceUsd": 3200,
+    "negotiable": true,
+    "condition": "used",
+    "location": "Costa Mesa, CA",
+    "description": "Removed after 8k miles for a bigger single. Fully functional, no cracks, no oil in the compressor housing. Comes with the OEM turbo core as a spare.",
+    "images": [
+      "https://picsum.photos/seed/listing-pureturbo-1/1200/900",
+      "https://picsum.photos/seed/listing-pureturbo-2/1200/900",
+      "https://picsum.photos/seed/listing-pureturbo-3/1200/900"
+    ],
+    "sellerId": "u7",
+    "fitment": "Toyota GR Supra A90/A91",
+    "postedAt": "2026-08-19",
+    "carId": "c7"
+  },
+  {
+    "id": "l7",
+    "title": "Brembo GT 6-Piston Big Brake Kit — Civic Type R FK8",
+    "category": "brakes",
+    "priceUsd": 1800,
+    "negotiable": true,
+    "condition": "like-new",
+    "location": "Riverside, CA",
+    "description": "One track day on these, less than 200 miles. Selling to fund a different caliper color. Rotors barely broken in, pads at 90%.",
+    "images": [
+      "https://picsum.photos/seed/listing-brembo-gt-1/1200/900",
+      "https://picsum.photos/seed/listing-brembo-gt-2/1200/900"
+    ],
+    "sellerId": "u5",
+    "fitment": "Honda Civic Type R FK8",
+    "postedAt": "2026-09-02",
+    "carId": "c5"
+  },
+  {
+    "id": "l8",
+    "title": "Volk TE37 17x9 +45 — Gunmetal, Set of 4",
+    "category": "wheels",
+    "priceUsd": 2100,
+    "negotiable": false,
+    "condition": "used",
+    "location": "Torrance, CA",
+    "description": "Genuine Rays Volk TE37, no cracks, no repairs, all four verify clean with a coin test. Some light curb rash on one wheel, pictured. Priced accordingly.",
+    "images": [
+      "https://picsum.photos/seed/listing-te37-1/1200/900",
+      "https://picsum.photos/seed/listing-te37-2/1200/900",
+      "https://picsum.photos/seed/listing-te37-3/1200/900"
+    ],
+    "sellerId": "u3",
+    "fitment": "5x114.3, fits most JDM applications",
+    "postedAt": "2026-08-11",
+    "carId": "c3"
+  },
+  {
+    "id": "l9",
+    "title": "Voltex-Style Rear Diffuser — GR86/BRZ",
+    "category": "exterior",
+    "priceUsd": 380,
+    "negotiable": true,
+    "condition": "new",
+    "location": "Anaheim, CA",
+    "description": "Bought two by mistake from two different group buys. This one is still in the box, never test fit. Dry carbon weave, comes with mounting hardware.",
+    "images": [
+      "https://picsum.photos/seed/listing-diffuser-1/1200/900",
+      "https://picsum.photos/seed/listing-diffuser-2/1200/900"
+    ],
+    "sellerId": "u6",
+    "fitment": "Toyota GR86 / Subaru BRZ 2022+",
+    "postedAt": "2026-09-03",
+    "carId": "c6"
+  },
+  {
+    "id": "l10",
+    "title": "AiM Solo 2 DL Lap Timer + GPS",
+    "category": "electronics",
+    "priceUsd": 420,
+    "negotiable": true,
+    "condition": "used",
+    "location": "San Diego, CA",
+    "description": "Upgrading to a full data system so this is redundant now. Works perfectly, all mounting hardware and the USB cable included. Track maps preloaded for Buttonwillow, Willow Springs, and Chuckwalla.",
+    "images": [
+      "https://picsum.photos/seed/listing-aim-solo-1/1200/900",
+      "https://picsum.photos/seed/listing-aim-solo-2/1200/900"
+    ],
+    "sellerId": "u4",
+    "fitment": "Universal",
+    "postedAt": "2026-08-25",
+    "carId": "c4"
+  }
+]

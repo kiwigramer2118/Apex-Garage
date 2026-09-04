@@ -1,0 +1,29 @@
+[
+  {
+    "id": "buttonwillow",
+    "name": "Buttonwillow Raceway Park",
+    "shortName": "Buttonwillow",
+    "city": "Buttonwillow, CA",
+    "lat": 35.4878,
+    "lng": -119.453,
+    "configLayout": "Configuration 13 CW"
+  },
+  {
+    "id": "willow-springs",
+    "name": "Willow Springs International Raceway",
+    "shortName": "Willow Springs",
+    "city": "Rosamond, CA",
+    "lat": 34.8697,
+    "lng": -118.2542,
+    "configLayout": "Big Willow"
+  },
+  {
+    "id": "chuckwalla",
+    "name": "Chuckwalla Valley Raceway",
+    "shortName": "Chuckwalla",
+    "city": "Desert Center, CA",
+    "lat": 33.742,
+    "lng": -115.409,
+    "configLayout": "Full Course CW"
+  }
+]

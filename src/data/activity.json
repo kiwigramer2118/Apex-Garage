@@ -1,0 +1,7 @@
+[
+  { "id": "a1", "userId": "u8", "type": "rsvp", "targetId": "e1", "createdAt": "2026-09-03T18:22:00-07:00" },
+  { "id": "a2", "userId": "u8", "type": "listing", "targetId": "l4", "createdAt": "2026-09-01T09:05:00-07:00" },
+  { "id": "a3", "userId": "u8", "type": "car-update", "targetId": "c8", "createdAt": "2026-08-27T14:40:00-07:00" },
+  { "id": "a4", "userId": "u8", "type": "rsvp", "targetId": "e9", "createdAt": "2026-08-20T11:15:00-07:00" },
+  { "id": "a5", "userId": "u8", "type": "rsvp", "targetId": "e3", "createdAt": "2026-08-12T08:30:00-07:00" }
+]
