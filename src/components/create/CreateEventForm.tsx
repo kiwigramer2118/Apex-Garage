@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ChevronLeft } from "lucide-react";
 import { tracks, EVENT_CATEGORY_LABEL, CURRENT_USER_ID } from "@/lib/data";
-import type { EventCategory, TrackEvent } from "@/types";
+import type { EventCategory, TrackEvent, TrackId } from "@/types";
 import { useAppStore } from "@/store/useAppStore";
 import { FormField, inputClass } from "./FormField";
 
@@ -27,7 +27,7 @@ export function CreateEventForm({
 
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState<EventCategory>("track-day");
-  const [trackId, setTrackId] = useState(tracks[0].id);
+  const [trackId, setTrackId] = useState<TrackId>(tracks[0].id);
   const [date, setDate] = useState("");
   const [startTime, setStartTime] = useState("08:00");
   const [endTime, setEndTime] = useState("15:00");
@@ -99,7 +99,11 @@ export function CreateEventForm({
         </FormField>
 
         <FormField label="Pista">
-          <select className={inputClass} value={trackId} onChange={(e) => setTrackId(e.target.value)}>
+          <select
+            className={inputClass}
+            value={trackId}
+            onChange={(e) => setTrackId(e.target.value as TrackId)}
+          >
             {tracks.map((t) => (
               <option key={t.id} value={t.id}>
                 {t.shortName}
