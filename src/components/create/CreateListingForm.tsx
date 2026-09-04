@@ -179,7 +179,7 @@ export function CreateListingForm({
       <button
         type="submit"
         disabled={!canSubmit}
-        className="mt-2 w-full rounded-button bg-accent py-3.5 text-body text-bg transition-colors duration-150 hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-40"
+        className="mt-2 w-full rounded-button bg-accent py-3.5 text-body text-onaccent transition-colors duration-150 hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-40"
       >
         Publicar clasificado
       </button>

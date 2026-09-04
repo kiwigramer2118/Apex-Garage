@@ -41,7 +41,7 @@ export function FloatingMapCard({ anchor, containerSize, onClose, children }: Fl
   return (
     <motion.div
       ref={ref}
-      className="absolute z-30 overflow-hidden rounded-card border border-border bg-surface-1 shadow-[0_16px_48px_rgba(0,0,0,0.55)]"
+      className="absolute z-30 overflow-hidden rounded-card border border-border bg-surface-1 shadow-[0_16px_48px_rgba(0,0,0,0.2)]"
       style={{ width: CARD_WIDTH, left, top }}
       initial={{ opacity: 0, scale: 0.9, y: openAbove ? 8 : -8 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}

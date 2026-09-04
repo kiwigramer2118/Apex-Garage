@@ -29,7 +29,7 @@ export function RSVPButton({ eventId, full }: { eventId: string; full?: boolean 
         full && "w-full",
         attending
           ? "bg-surface-3 text-text-primary"
-          : "bg-accent text-bg hover:bg-accent-hover"
+          : "bg-accent text-onaccent hover:bg-accent-hover"
       )}
     >
       <AnimatePresence mode="wait" initial={false}>

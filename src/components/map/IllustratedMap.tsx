@@ -212,7 +212,7 @@ export function IllustratedMap({ events, activeEventIds, selectedEventId, onSele
               onClick={(e) => handlePinClick(e, "car", car.id)}
               aria-label={`${car.make} ${car.model} — ${owner.name}`}
             >
-              <span className="flex h-7 w-7 items-center justify-center rounded-[10px] border border-border bg-surface-2 text-text-secondary shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
+              <span className="flex h-7 w-7 items-center justify-center rounded-[10px] border border-border bg-surface-2 text-text-secondary shadow-[0_2px_10px_rgba(0,0,0,0.14)]">
                 <CarIcon size={13} strokeWidth={1.75} />
               </span>
             </motion.button>
@@ -252,7 +252,7 @@ export function IllustratedMap({ events, activeEventIds, selectedEventId, onSele
                 />
               )}
               <span
-                className="relative h-3.5 w-3.5 rounded-full border-2 border-bg shadow-[0_1px_4px_rgba(0,0,0,0.5)]"
+                className="relative h-3.5 w-3.5 rounded-full border-2 border-bg shadow-[0_1px_4px_rgba(0,0,0,0.2)]"
                 style={{ background: color }}
               />
             </motion.button>
@@ -395,7 +395,7 @@ function CarCardBody({ car, owner }: { car: Car; owner: ReturnType<typeof getUse
         <div className="mt-1 flex gap-2">
           <Link
             href={`/cars/${car.id}`}
-            className="flex-1 rounded-button bg-accent py-2.5 text-center text-caption text-bg transition-colors duration-150 hover:bg-accent-hover"
+            className="flex-1 rounded-button bg-accent py-2.5 text-center text-caption text-onaccent transition-colors duration-150 hover:bg-accent-hover"
           >
             Ver auto
           </Link>
@@ -439,22 +439,22 @@ function MapBackdrop({
     <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
       <defs>
         <pattern id="apex-dot-grid" width="4" height="4" patternUnits="userSpaceOnUse">
-          <circle cx="0.5" cy="0.5" r="0.35" fill="#2A2A2C" fillOpacity="0.5" />
+          <circle cx="0.5" cy="0.5" r="0.35" fill="#16160F" fillOpacity="0.16" />
         </pattern>
         <radialGradient id="apex-glow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#FF7A45" stopOpacity="0.16" />
-          <stop offset="100%" stopColor="#FF7A45" stopOpacity="0" />
+          <stop offset="0%" stopColor="#B3F22C" stopOpacity="0.24" />
+          <stop offset="100%" stopColor="#B3F22C" stopOpacity="0" />
         </radialGradient>
       </defs>
 
-      <rect width="100" height="100" fill="#0A0A0B" />
+      <rect width="100" height="100" fill="#F1F1E8" />
       <rect width="100" height="100" fill="url(#apex-dot-grid)" />
 
       {trackPositions.map(({ track, xPct, yPct }) => (
         <g key={track.id}>
           <circle cx={xPct} cy={yPct} r="16" fill="url(#apex-glow)" />
           {[5, 9, 13].map((r) => (
-            <circle key={r} cx={xPct} cy={yPct} r={r} fill="none" stroke="#9A9A9C" strokeOpacity="0.08" strokeWidth="0.2" />
+            <circle key={r} cx={xPct} cy={yPct} r={r} fill="none" stroke="#16160F" strokeOpacity="0.12" strokeWidth="0.2" />
           ))}
         </g>
       ))}
@@ -463,8 +463,8 @@ function MapBackdrop({
         <path
           d={routeD}
           fill="none"
-          stroke="#FF7A45"
-          strokeOpacity="0.22"
+          stroke="#4B6B12"
+          strokeOpacity="0.35"
           strokeWidth="0.35"
           strokeDasharray="1.2 1.4"
           strokeLinecap="round"

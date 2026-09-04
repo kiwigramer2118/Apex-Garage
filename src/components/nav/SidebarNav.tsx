@@ -17,7 +17,7 @@ export function SidebarNav() {
   return (
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col border-r border-border bg-surface-1 px-4 py-6 lg:flex">
       <div className="mb-8 flex items-center gap-2 px-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-button bg-accent-subtle text-accent">
+        <div className="flex h-8 w-8 items-center justify-center rounded-button bg-accent-subtle text-accent-ink">
           <span className="font-display text-heading">A</span>
         </div>
         <span className="font-display text-heading text-text-primary">Apex Garage</span>
@@ -46,7 +46,7 @@ export function SidebarNav() {
                 <Icon
                   size={19}
                   strokeWidth={1.75}
-                  className={cn("relative", active ? "text-accent" : "text-text-muted")}
+                  className={cn("relative", active ? "text-accent-ink" : "text-text-muted")}
                 />
                 <span className="relative">{item.label}</span>
               </Link>

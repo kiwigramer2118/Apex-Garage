@@ -7,11 +7,11 @@
 import type { EventCategory } from "@/types";
 
 export const CATEGORY_COLOR: Record<EventCategory, string> = {
-  "track-day": "#FF7A45",
-  "time-attack": "#E24B4A",
-  "cars-coffee": "#4A9B6E",
-  meet: "#9A9A9C",
-  autocross: "#F5F5F4",
+  "track-day": "#8FCC1F",
+  "time-attack": "#E0433D",
+  "cars-coffee": "#0F9D6B",
+  meet: "#3D7DFF",
+  autocross: "#8B5CF6",
 };
 
 export function createEventPinElement(opts: {
@@ -35,7 +35,7 @@ export function createEventPinElement(opts: {
   }
 
   const dot = document.createElement("span");
-  dot.className = "relative h-3 w-3 rounded-full border-2 border-bg shadow-[0_1px_4px_rgba(0,0,0,0.5)]";
+  dot.className = "relative h-3 w-3 rounded-full border-2 border-bg shadow-[0_1px_4px_rgba(0,0,0,0.22)]";
   dot.style.background = color;
   wrapper.appendChild(dot);
 

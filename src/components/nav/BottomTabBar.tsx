@@ -41,7 +41,7 @@ export function BottomTabBar() {
                   className={cn(
                     "flex items-center justify-center transition-colors duration-150",
                     isCreate
-                      ? "-mt-4 h-11 w-11 rounded-full bg-accent text-bg shadow-[0_4px_16px_rgba(255,122,69,0.35)]"
+                      ? "-mt-4 h-11 w-11 rounded-full bg-accent text-onaccent shadow-[0_4px_16px_rgba(179,242,44,0.35)]"
                       : "h-6 w-6"
                   )}
                 >
@@ -49,7 +49,7 @@ export function BottomTabBar() {
                     size={isCreate ? 22 : 20}
                     strokeWidth={1.75}
                     className={cn(
-                      !isCreate && (active ? "text-accent" : "text-text-muted")
+                      !isCreate && (active ? "text-accent-ink" : "text-text-muted")
                     )}
                   />
                 </span>

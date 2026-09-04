@@ -120,7 +120,7 @@ export function LiveMap({ events, activeEventIds, selectedEventId, onSelectEvent
       const el = marker.getElement();
       el.style.zIndex = id === selectedEventId ? "10" : "1";
       el.style.filter =
-        id === selectedEventId ? "drop-shadow(0 0 6px rgba(255,122,69,0.6))" : "none";
+        id === selectedEventId ? "drop-shadow(0 0 6px rgba(179,242,44,0.7))" : "none";
     });
 
     if (!selectedEventId || !mapRef.current) return;
@@ -137,7 +137,7 @@ export function LiveMap({ events, activeEventIds, selectedEventId, onSelectEvent
   if (!MAPBOX_TOKEN) {
     return (
       <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-surface-1 px-8 text-center">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-subtle text-accent">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-subtle text-accent-ink">
           <span className="text-heading">◎</span>
         </div>
         <p className="max-w-xs text-body text-text-secondary">
@@ -151,7 +151,7 @@ export function LiveMap({ events, activeEventIds, selectedEventId, onSelectEvent
           href="https://account.mapbox.com/access-tokens/"
           target="_blank"
           rel="noreferrer"
-          className="text-caption text-accent underline underline-offset-2"
+          className="text-caption text-accent-ink underline underline-offset-2"
         >
           Obtener un token gratis
         </a>

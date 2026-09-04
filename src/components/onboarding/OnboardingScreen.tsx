@@ -41,7 +41,7 @@ export function OnboardingScreen() {
   return (
     <div className="flex h-dvh w-full flex-col bg-bg px-6 pt-[calc(env(safe-area-inset-top)+20px)]">
       <div className="flex items-center justify-between">
-        <div className="flex h-8 w-8 items-center justify-center rounded-button bg-accent-subtle text-accent">
+        <div className="flex h-8 w-8 items-center justify-center rounded-button bg-accent-subtle text-accent-ink">
           <span className="font-display text-heading">A</span>
         </div>
         <button type="button" onClick={finish} className="text-caption text-text-muted">
@@ -59,7 +59,7 @@ export function OnboardingScreen() {
             transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col items-center gap-5"
           >
-            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-accent-subtle text-accent">
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-accent-subtle text-accent-ink">
               <Icon size={34} strokeWidth={1.5} />
             </div>
             <h1 className="max-w-xs font-display text-title text-text-primary">{Slide.title}</h1>
@@ -82,7 +82,7 @@ export function OnboardingScreen() {
         <button
           type="button"
           onClick={() => (isLast ? finish() : setIndex((i) => i + 1))}
-          className="w-full max-w-xs rounded-button bg-accent py-3.5 text-body text-bg transition-colors duration-150 hover:bg-accent-hover"
+          className="w-full max-w-xs rounded-button bg-accent py-3.5 text-body text-onaccent transition-colors duration-150 hover:bg-accent-hover"
         >
           {isLast ? "Empezar" : "Siguiente"}
         </button>

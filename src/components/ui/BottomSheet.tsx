@@ -23,7 +23,7 @@ export function BottomSheet({ open, onClose, children }: BottomSheetProps) {
             onClick={onClose}
           />
           <motion.div
-            className="fixed inset-x-0 bottom-0 z-50 max-h-[82dvh] overflow-y-auto rounded-t-[20px] border-t border-border bg-surface-1 pb-[calc(env(safe-area-inset-bottom)+16px)] shadow-[0_-8px_40px_rgba(0,0,0,0.5)] lg:inset-x-auto lg:left-1/2 lg:bottom-6 lg:w-[440px] lg:-translate-x-1/2 lg:rounded-card lg:border"
+            className="fixed inset-x-0 bottom-0 z-50 max-h-[82dvh] overflow-y-auto rounded-t-[20px] border-t border-border bg-surface-1 pb-[calc(env(safe-area-inset-bottom)+16px)] shadow-[0_-8px_40px_rgba(0,0,0,0.18)] lg:inset-x-auto lg:left-1/2 lg:bottom-6 lg:w-[440px] lg:-translate-x-1/2 lg:rounded-card lg:border"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             exit={{ y: "100%" }}

@@ -33,7 +33,12 @@ export function CarHero({ car }: { car: Car }) {
           sizes="100vw"
         />
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/10 to-bg/40" />
+      {/*
+        A fixed dark scrim, not the (now light) `bg` token: this sits under
+        text overlaid directly on the hero photo below, which needs to stay
+        legible regardless of the app's light/dark theme.
+      */}
+      <div className="absolute inset-0 bg-gradient-to-t from-scrim via-scrim/20 to-scrim/60" />
 
       <Link
         href={`/profile/${car.ownerId}`}
@@ -44,15 +49,15 @@ export function CarHero({ car }: { car: Car }) {
 
       <div className="absolute inset-x-0 bottom-0 px-5 pb-6">
         <div className="mb-1.5 flex items-center gap-2">
-          <p className="text-caption uppercase tracking-wide text-text-muted">
+          <p className="text-caption uppercase tracking-wide text-white/60">
             {car.year} · {car.chassisCode}
           </p>
           <Badge tone={STATUS_TONE[car.status]}>{CAR_STATUS_LABEL[car.status]}</Badge>
         </div>
-        <h1 className="font-display text-display text-text-primary">
+        <h1 className="font-display text-display text-white">
           {car.make} {car.model}
         </h1>
-        <p className="text-body text-text-secondary">&ldquo;{car.nickname}&rdquo;</p>
+        <p className="text-body text-white/75">&ldquo;{car.nickname}&rdquo;</p>
       </div>
     </div>
   );

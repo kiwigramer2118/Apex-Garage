@@ -8,7 +8,7 @@ interface BadgeProps {
 
 const toneClasses: Record<NonNullable<BadgeProps["tone"]>, string> = {
   default: "bg-surface-3 text-text-secondary",
-  accent: "bg-accent-subtle text-accent",
+  accent: "bg-accent-subtle text-accent-ink",
   success: "bg-success/15 text-success",
   muted: "bg-surface-2 text-text-muted",
 };

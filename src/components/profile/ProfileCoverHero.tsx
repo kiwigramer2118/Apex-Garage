@@ -92,7 +92,7 @@ export function ProfileCoverHero({ user, stats, isOwnProfile }: ProfileCoverHero
           </div>
         )}
 
-        <div className="mt-5 flex w-full items-stretch justify-around rounded-card border border-border bg-surface-1 py-4 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
+        <div className="mt-5 flex w-full items-stretch justify-around rounded-card border border-border bg-surface-1 py-4 shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
           {stats.map((s) => (
             <div key={s.label} className="flex flex-col items-center gap-0.5">
               <span className="font-display text-heading text-text-primary">{s.value}</span>
@@ -115,7 +115,7 @@ function FollowButton() {
       type="button"
       onClick={() => setFollowing((f) => !f)}
       className={`mb-1 rounded-button px-5 py-2 text-caption transition-colors duration-150 ${
-        following ? "bg-surface-3 text-text-primary" : "bg-accent text-bg hover:bg-accent-hover"
+        following ? "bg-surface-3 text-text-primary" : "bg-accent text-onaccent hover:bg-accent-hover"
       }`}
     >
       {following ? "Siguiendo" : "Seguir"}

@@ -40,7 +40,7 @@ export function CreateScreen() {
                 onClick={() => setStep("event")}
                 className="flex items-center gap-4 rounded-card border border-border bg-surface-1 p-4 text-left transition-colors duration-150 hover:border-accent/50 hover:bg-surface-2"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-button bg-accent-subtle text-accent">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-button bg-accent-subtle text-accent-ink">
                   <CalendarPlus size={20} strokeWidth={1.75} />
                 </span>
                 <span>
@@ -56,7 +56,7 @@ export function CreateScreen() {
                 onClick={() => setStep("listing")}
                 className="flex items-center gap-4 rounded-card border border-border bg-surface-1 p-4 text-left transition-colors duration-150 hover:border-accent/50 hover:bg-surface-2"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-button bg-accent-subtle text-accent">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-button bg-accent-subtle text-accent-ink">
                   <Tag size={20} strokeWidth={1.75} />
                 </span>
                 <span>

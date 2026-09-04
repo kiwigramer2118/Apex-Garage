@@ -6,27 +6,43 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0A0A0B",
+        // Light-mode system, refreshed from the CarFin / Porsche / Renault
+        // reference set: warm off-white ground, near-black ink, and an
+        // electric-lime accent used for fills/highlights (never as small
+        // body text — see `accent.ink` below).
+        bg: "#F6F6F1",
         surface: {
-          1: "#131315",
-          2: "#1A1A1C",
-          3: "#202023",
+          1: "#FFFFFF",
+          2: "#EFEFE8",
+          3: "#E3E3DA",
         },
         border: {
-          DEFAULT: "#2A2A2C",
+          DEFAULT: "#DEDED4",
         },
         text: {
-          primary: "#F5F5F4",
-          secondary: "#9A9A9C",
-          muted: "#6B6B6D",
+          primary: "#16160F",
+          secondary: "#5A5A50",
+          muted: "#8C8C80",
         },
         accent: {
-          DEFAULT: "#FF7A45",
-          hover: "#E85F2C",
-          subtle: "#2A180E",
+          DEFAULT: "#B3F22C",
+          hover: "#9BDB1A",
+          subtle: "#EFFFC8",
+          // Deep, legible-on-light-bg green for text/icons that need to
+          // read as "accent" — the vivid DEFAULT is reserved for fills,
+          // borders, dots and buttons, where its low text-contrast doesn't
+          // matter. Referenced via `text-accent-ink`.
+          ink: "#4B6B12",
         },
-        success: "#4A9B6E",
-        danger: "#E24B4A",
+        success: "#0F9D6B",
+        danger: "#E0433D",
+        // Fixed, theme-independent tokens: `onaccent` is the text color for
+        // anything sitting on a solid bg-accent fill (buttons, FAB); `scrim`
+        // is the veil under text overlaid on hero photography, kept dark
+        // regardless of light/dark theme since photos need a dark gradient
+        // either way for light text to stay legible on top of them.
+        onaccent: "#12120B",
+        scrim: "#0B0B08",
       },
       borderRadius: {
         card: "16px",

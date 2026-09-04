@@ -8,7 +8,7 @@ export function ListingCard({ listing }: { listing: Listing }) {
   return (
     <Link
       href={`/classifieds/${listing.id}`}
-      className="group flex flex-col overflow-hidden rounded-card border border-border bg-surface-1 transition-all duration-200 ease-out-fast hover:-translate-y-0.5 hover:border-text-muted/40 hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
+      className="group flex flex-col overflow-hidden rounded-card border border-border bg-surface-1 transition-all duration-200 ease-out-fast hover:-translate-y-0.5 hover:border-text-muted/40 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface-2">
         <Image
@@ -24,7 +24,7 @@ export function ListingCard({ listing }: { listing: Listing }) {
       </div>
       <div className="flex flex-1 flex-col gap-1 p-3">
         <p className="line-clamp-2 text-body text-text-primary">{listing.title}</p>
-        <p className="font-display text-heading text-accent">{formatPrice(listing.priceUsd)}</p>
+        <p className="font-display text-heading text-accent-ink">{formatPrice(listing.priceUsd)}</p>
         <div className="mt-1 flex items-center justify-between text-caption text-text-muted">
           <span>{listing.location}</span>
           <span>{timeAgo(listing.postedAt)}</span>

@@ -27,7 +27,7 @@ export function EventDetailScreen({ eventId }: { eventId: string }) {
     return (
       <div className="flex h-dvh flex-col items-center justify-center gap-3 px-6 text-center">
         <p className="text-body text-text-secondary">No encontramos este evento.</p>
-        <Link href="/" className="text-caption text-accent underline underline-offset-2">
+        <Link href="/" className="text-caption text-accent-ink underline underline-offset-2">
           Volver al mapa
         </Link>
       </div>
@@ -70,7 +70,7 @@ export function EventDetailScreen({ eventId }: { eventId: string }) {
           >
             <MapPin size={17} className="shrink-0 text-text-muted" strokeWidth={1.75} />
             <span className="flex-1">{track ? `${track.name}, ${track.city}` : "SoCal"}</span>
-            <span className="text-caption text-accent">Ver en mapa</span>
+            <span className="text-caption text-accent-ink">Ver en mapa</span>
           </Link>
           {host && (
             <div className="flex items-center gap-3 text-body text-text-secondary">
@@ -85,7 +85,7 @@ export function EventDetailScreen({ eventId }: { eventId: string }) {
         {host && (
           <Link
             href={`/profile/${host.id}`}
-            className="mt-4 flex items-center gap-3 rounded-card border border-border bg-surface-1 p-3 shadow-[0_4px_20px_rgba(0,0,0,0.2)] transition-colors duration-150 hover:border-text-muted/40"
+            className="mt-4 flex items-center gap-3 rounded-card border border-border bg-surface-1 p-3 shadow-[0_4px_20px_rgba(0,0,0,0.07)] transition-colors duration-150 hover:border-text-muted/40"
           >
             <Avatar src={host.avatar} alt={host.name} size={40} />
             <div>

@@ -22,12 +22,13 @@ function initialsFor(name: string): string {
 }
 
 // A small fixed palette of hue pairs tuned to sit comfortably against the
-// app's near-black surfaces — avoids random hues drifting into neon or mud.
+// app's white/off-white surfaces — vivid but each pair keeps enough internal
+// contrast for the centered initials to stay legible.
 const GRADIENT_PAIRS: [string, string][] = [
-  ["#FF7A45", "#E24B4A"], // accent -> danger (warm)
-  ["#4A9B6E", "#2E7D5A"], // success greens
-  ["#5B8DEF", "#3A5FC4"], // cool blue
-  ["#C77DFF", "#7B4FE0"], // violet
+  ["#B3F22C", "#6FA30F"], // accent lime -> deep olive
+  ["#0F9D6B", "#0B6E4C"], // success teal-greens
+  ["#3D7DFF", "#2450B8"], // vivid blue
+  ["#8B5CF6", "#5B32C4"], // violet
   ["#F5B942", "#E2843A"], // amber
   ["#4AC4D9", "#2E93A8"], // teal
   ["#E24B8F", "#B93A6E"], // magenta

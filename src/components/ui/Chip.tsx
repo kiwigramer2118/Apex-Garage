@@ -17,7 +17,7 @@ export function Chip({ label, active, onClick, className }: ChipProps) {
       className={cn(
         "whitespace-nowrap rounded-pill border px-4 py-2 text-caption transition-all duration-150 ease-out-fast",
         active
-          ? "border-accent bg-accent-subtle text-accent"
+          ? "border-accent bg-accent-subtle text-accent-ink"
           : "border-border bg-surface-2/80 text-text-secondary hover:text-text-primary",
         className
       )}

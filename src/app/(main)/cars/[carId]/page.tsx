@@ -39,7 +39,7 @@ export default function CarProfilePage({ params }: { params: { carId: string } }
                 <Timer size={13} />
                 Mejor vuelta
               </div>
-              <p className="font-display text-heading text-accent">{car.bestLapTime}</p>
+              <p className="font-display text-heading text-accent-ink">{car.bestLapTime}</p>
               {track && <p className="text-caption text-text-muted">{track.shortName}</p>}
             </div>
           ) : (
