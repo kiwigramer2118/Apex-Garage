@@ -7,12 +7,11 @@
     "chassisCode": "E46",
     "year": 2003,
     "nickname": "Steel Grey Wolf",
-    "heroImage": "https://picsum.photos/seed/e46-hero/1600/1000",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_M3_coupe_E46.jpg?width=1600",
     "gallery": [
-      "https://picsum.photos/seed/e46-g1/1200/800",
-      "https://picsum.photos/seed/e46-g2/1200/800",
-      "https://picsum.photos/seed/e46-g3/1200/800",
-      "https://picsum.photos/seed/e46-g4/1200/800"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_E46-M3.JPG?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/S54B32-BMW-E46-M3.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_E46_M3_Phoenix_Yellow_(2).jpg?width=1200"
     ],
     "specs": {
       "power": "343 hp @ 7,900 rpm",
@@ -23,10 +22,38 @@
       "suspension": "KW Clubsport 3-way"
     },
     "mods": [
-      { "category": "Suspension", "items": ["KW Clubsport 3-way coilovers", "Vorshlag camber plates", "Powerflex full bushing kit"] },
-      { "category": "Wheels & Brakes", "items": ["Apex ARC-8 18x9.5 / 18x10.5", "StopTech ST-60 big brake kit", "Motul RBF660 fluid"] },
-      { "category": "Engine", "items": ["Supersprint headers", "Custom velocity stacks", "Setrab oil cooler"] },
-      { "category": "Exterior", "items": ["CSL-style trunk", "Voltex front lip", "Carbon mirror caps"] }
+      {
+        "category": "Suspension",
+        "items": [
+          "KW Clubsport 3-way coilovers",
+          "Vorshlag camber plates",
+          "Powerflex full bushing kit"
+        ]
+      },
+      {
+        "category": "Wheels & Brakes",
+        "items": [
+          "Apex ARC-8 18x9.5 / 18x10.5",
+          "StopTech ST-60 big brake kit",
+          "Motul RBF660 fluid"
+        ]
+      },
+      {
+        "category": "Engine",
+        "items": [
+          "Supersprint headers",
+          "Custom velocity stacks",
+          "Setrab oil cooler"
+        ]
+      },
+      {
+        "category": "Exterior",
+        "items": [
+          "CSL-style trunk",
+          "Voltex front lip",
+          "Carbon mirror caps"
+        ]
+      }
     ],
     "bestLapTrackId": "willow-springs",
     "bestLapTime": "1:24.310"
@@ -39,11 +66,11 @@
     "chassisCode": "NB",
     "year": 2000,
     "nickname": "Kimchi Rocket",
-    "heroImage": "https://picsum.photos/seed/nb-hero/1600/1000",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Mazda-mx5-nb-emerald-green.jpg?width=1600",
     "gallery": [
-      "https://picsum.photos/seed/nb-g1/1200/800",
-      "https://picsum.photos/seed/nb-g2/1200/800",
-      "https://picsum.photos/seed/nb-g3/1200/800"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/MX-5_SP_Engine_Bay.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mazda_Miata_NA_custom_interior.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/2006_Mazda_MX-5_Miata_Grand_Touring_in_Marble_White%2C_Front_Right%2C_06-08-2023.jpg?width=1200"
     ],
     "specs": {
       "power": "128 hp @ 6,500 rpm",
@@ -54,10 +81,36 @@
       "suspension": "Öhlins DFV coilovers"
     },
     "mods": [
-      { "category": "Suspension", "items": ["Öhlins DFV coilovers", "Flyin' Miata sway bars", "Solid subframe bushings"] },
-      { "category": "Wheels & Brakes", "items": ["Enkei RPF1 15x9", "Wilwood front calipers"] },
-      { "category": "Weight", "items": ["Hardtop delete", "Carbon fiber trunk", "Stripped rear seat delete (N/A, roadster)"] },
-      { "category": "Exterior", "items": ["Garage Vary front bumper", "Voodoo Racing wing"] }
+      {
+        "category": "Suspension",
+        "items": [
+          "Öhlins DFV coilovers",
+          "Flyin' Miata sway bars",
+          "Solid subframe bushings"
+        ]
+      },
+      {
+        "category": "Wheels & Brakes",
+        "items": [
+          "Enkei RPF1 15x9",
+          "Wilwood front calipers"
+        ]
+      },
+      {
+        "category": "Weight",
+        "items": [
+          "Hardtop delete",
+          "Carbon fiber trunk",
+          "Stripped rear seat delete (N/A, roadster)"
+        ]
+      },
+      {
+        "category": "Exterior",
+        "items": [
+          "Garage Vary front bumper",
+          "Voodoo Racing wing"
+        ]
+      }
     ],
     "bestLapTrackId": "chuckwalla",
     "bestLapTime": "1:52.940"
@@ -70,12 +123,11 @@
     "chassisCode": "AP2",
     "year": 2007,
     "nickname": "Berlina Bee",
-    "heroImage": "https://picsum.photos/seed/ap2-hero/1600/1000",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Honda_S2000_AP2_Suzuka_Blue_Metallic_(6).jpg?width=1600",
     "gallery": [
-      "https://picsum.photos/seed/ap2-g1/1200/800",
-      "https://picsum.photos/seed/ap2-g2/1200/800",
-      "https://picsum.photos/seed/ap2-g3/1200/800",
-      "https://picsum.photos/seed/ap2-g4/1200/800"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Honda_S2000_type_S_(AP2)_front.JPG?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Honda_S2000_AP2_Suzuka_Blue_Metallic_(5).jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Honda_S2000_AP2_Grand_Prix_White_front_left.jpg?width=1200"
     ],
     "specs": {
       "power": "237 hp @ 7,800 rpm",
@@ -86,9 +138,29 @@
       "suspension": "BC Racing BR Series"
     },
     "mods": [
-      { "category": "Suspension", "items": ["BC Racing BR coilovers", "Spoon rigid collars", "Cusco front strut bar"] },
-      { "category": "Wheels & Brakes", "items": ["Volk TE37 17x9", "Endless MX72 pads"] },
-      { "category": "Engine", "items": ["Spoon N1 exhaust", "AP1 6-speed swap", "Password:JDM intake"] }
+      {
+        "category": "Suspension",
+        "items": [
+          "BC Racing BR coilovers",
+          "Spoon rigid collars",
+          "Cusco front strut bar"
+        ]
+      },
+      {
+        "category": "Wheels & Brakes",
+        "items": [
+          "Volk TE37 17x9",
+          "Endless MX72 pads"
+        ]
+      },
+      {
+        "category": "Engine",
+        "items": [
+          "Spoon N1 exhaust",
+          "AP1 6-speed swap",
+          "Password:JDM intake"
+        ]
+      }
     ],
     "bestLapTrackId": "buttonwillow",
     "bestLapTime": "1:58.220"
@@ -101,11 +173,11 @@
     "chassisCode": "VA",
     "year": 2019,
     "nickname": "Blue Peak",
-    "heroImage": "https://picsum.photos/seed/sti-hero/1600/1000",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/SUBARU_WRX_STI_(VA)_Color_by_WR_Blue-Pearl.jpg?width=1600",
     "gallery": [
-      "https://picsum.photos/seed/sti-g1/1200/800",
-      "https://picsum.photos/seed/sti-g2/1200/800",
-      "https://picsum.photos/seed/sti-g3/1200/800"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Subaru_WRX_STI_-_Blue.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Subaru_WRX_STI_(VAB)_interior.JPG?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/The_engineroom_of_Subaru_WRX_STI_(VAB).JPG?width=1200"
     ],
     "specs": {
       "power": "310 hp @ 6,000 rpm",
@@ -116,9 +188,27 @@
       "suspension": "Öhlins Road & Track"
     },
     "mods": [
-      { "category": "Suspension", "items": ["Öhlins Road & Track coilovers", "Whiteline adjustable end links"] },
-      { "category": "Drivetrain", "items": ["Cusco center diff tune", "Kartboy short shifter"] },
-      { "category": "Wheels & Brakes", "items": ["Advan Racing RS-DF 18x9.5", "DBA 5000 rotors"] }
+      {
+        "category": "Suspension",
+        "items": [
+          "Öhlins Road & Track coilovers",
+          "Whiteline adjustable end links"
+        ]
+      },
+      {
+        "category": "Drivetrain",
+        "items": [
+          "Cusco center diff tune",
+          "Kartboy short shifter"
+        ]
+      },
+      {
+        "category": "Wheels & Brakes",
+        "items": [
+          "Advan Racing RS-DF 18x9.5",
+          "DBA 5000 rotors"
+        ]
+      }
     ],
     "bestLapTrackId": null,
     "bestLapTime": null
@@ -131,11 +221,11 @@
     "chassisCode": "FK8",
     "year": 2021,
     "nickname": "Champagne Problems",
-    "heroImage": "https://picsum.photos/seed/fk8-hero/1600/1000",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Honda_CIVIC_TYPE_R_(DBA-FK8)_front.jpg?width=1600",
     "gallery": [
-      "https://picsum.photos/seed/fk8-g1/1200/800",
-      "https://picsum.photos/seed/fk8-g2/1200/800",
-      "https://picsum.photos/seed/fk8-g3/1200/800"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Honda_CIVIC_TYPE_R_(DBA-FK8)_rear.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Honda_CIVIC_TYPE_R_(FK8)_interior.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Honda_CIVIC_TYPE_R_(DBA-FK8).jpg?width=1200"
     ],
     "specs": {
       "power": "306 hp @ 6,500 rpm",
@@ -146,9 +236,29 @@
       "suspension": "KW V3 coilovers"
     },
     "mods": [
-      { "category": "Suspension", "items": ["KW V3 coilovers", "Hardrace front camber bolts", "Eibach anti-roll bars"] },
-      { "category": "Engine", "items": ["PRL Motorsports intake", "Downpipe + catback", "Hondata FlashPro tune"] },
-      { "category": "Wheels & Brakes", "items": ["Konig Ampliform 19x9.5", "Brembo GT big brake kit"] }
+      {
+        "category": "Suspension",
+        "items": [
+          "KW V3 coilovers",
+          "Hardrace front camber bolts",
+          "Eibach anti-roll bars"
+        ]
+      },
+      {
+        "category": "Engine",
+        "items": [
+          "PRL Motorsports intake",
+          "Downpipe + catback",
+          "Hondata FlashPro tune"
+        ]
+      },
+      {
+        "category": "Wheels & Brakes",
+        "items": [
+          "Konig Ampliform 19x9.5",
+          "Brembo GT big brake kit"
+        ]
+      }
     ],
     "bestLapTrackId": "buttonwillow",
     "bestLapTime": "1:52.005"
@@ -161,11 +271,11 @@
     "chassisCode": "ZN8",
     "year": 2023,
     "nickname": "Slow Car Fast",
-    "heroImage": "https://picsum.photos/seed/gr86-hero/1600/1000",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/2022_Toyota_GR86_Premium_in_Track_bRed%2C_front_right_(NYIAS_2022).jpg?width=1600",
     "gallery": [
-      "https://picsum.photos/seed/gr86-g1/1200/800",
-      "https://picsum.photos/seed/gr86-g2/1200/800",
-      "https://picsum.photos/seed/gr86-g3/1200/800"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_GR86_RZ_6MT_(3BA-ZN8-A2E8).jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/2022_Toyota_GR86_Premium_in_Halo%2C_Front_Right%2C_09-27-2022.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/2022_Toyota_GR86_ZN8_Track_Bred.jpg?width=1200"
     ],
     "specs": {
       "power": "228 hp @ 7,000 rpm",
@@ -176,9 +286,27 @@
       "suspension": "BC Racing BR Series"
     },
     "mods": [
-      { "category": "Suspension", "items": ["BC Racing BR coilovers", "Whiteline sway bar set"] },
-      { "category": "Wheels & Brakes", "items": ["Enkei RPF1 17x9", "Project Mu brake pads"] },
-      { "category": "Exterior", "items": ["OE wing delete", "Voltex-style diffuser"] }
+      {
+        "category": "Suspension",
+        "items": [
+          "BC Racing BR coilovers",
+          "Whiteline sway bar set"
+        ]
+      },
+      {
+        "category": "Wheels & Brakes",
+        "items": [
+          "Enkei RPF1 17x9",
+          "Project Mu brake pads"
+        ]
+      },
+      {
+        "category": "Exterior",
+        "items": [
+          "OE wing delete",
+          "Voltex-style diffuser"
+        ]
+      }
     ],
     "bestLapTrackId": "chuckwalla",
     "bestLapTime": "2:01.610"
@@ -191,12 +319,11 @@
     "chassisCode": "A90",
     "year": 2022,
     "nickname": "Renaissance",
-    "heroImage": "https://picsum.photos/seed/a90-hero/1600/1000",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_GR_Supra_RZ_(3BA-DB42-ZRRW)_front.jpg?width=1600",
     "gallery": [
-      "https://picsum.photos/seed/a90-g1/1200/800",
-      "https://picsum.photos/seed/a90-g2/1200/800",
-      "https://picsum.photos/seed/a90-g3/1200/800",
-      "https://picsum.photos/seed/a90-g4/1200/800"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_GR_Supra_SZ_(3BA-DB82-ZSRW)_front.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_GR_Supra_RZ_6MT_(3BA-DB06-MURW)_interior.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/The_frontview_of_Toyota_GR_SUPRA_SZ_(3BA-DB82-ZSRW).jpg?width=1200"
     ],
     "specs": {
       "power": "469 hp @ 5,800 rpm (tuned)",
@@ -207,9 +334,28 @@
       "suspension": "MCS RR1 coilovers"
     },
     "mods": [
-      { "category": "Engine", "items": ["Pure Turbos PURE800 upgrade", "MHD stage 2+ tune", "Downpipe + intercooler"] },
-      { "category": "Suspension", "items": ["MCS RR1 coilovers", "Whiteline rear toe arms"] },
-      { "category": "Wheels & Brakes", "items": ["BBS RI-D 19x9.5", "AP Racing big brake kit"] }
+      {
+        "category": "Engine",
+        "items": [
+          "Pure Turbos PURE800 upgrade",
+          "MHD stage 2+ tune",
+          "Downpipe + intercooler"
+        ]
+      },
+      {
+        "category": "Suspension",
+        "items": [
+          "MCS RR1 coilovers",
+          "Whiteline rear toe arms"
+        ]
+      },
+      {
+        "category": "Wheels & Brakes",
+        "items": [
+          "BBS RI-D 19x9.5",
+          "AP Racing big brake kit"
+        ]
+      }
     ],
     "bestLapTrackId": "willow-springs",
     "bestLapTime": "1:21.740"
@@ -222,11 +368,11 @@
     "chassisCode": "E46",
     "year": 2002,
     "nickname": "Work In Progress",
-    "heroImage": "https://picsum.photos/seed/alex-e46-hero/1600/1000",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_E46-M3_(3).JPG?width=1600",
     "gallery": [
-      "https://picsum.photos/seed/alex-e46-g1/1200/800",
-      "https://picsum.photos/seed/alex-e46-g2/1200/800",
-      "https://picsum.photos/seed/alex-e46-g3/1200/800"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_E46-M3.JPG?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/S54B32-BMW-E46-M3.jpg?width=1200",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_M3_coupe_E46.jpg?width=1200"
     ],
     "specs": {
       "power": "333 hp @ 7,900 rpm",
@@ -237,9 +383,27 @@
       "suspension": "Bilstein B16 PSS10"
     },
     "mods": [
-      { "category": "Suspension", "items": ["Bilstein B16 PSS10 coilovers", "UUC subframe reinforcement"] },
-      { "category": "Wheels & Brakes", "items": ["OEM Style 67 18\" (refinished)", "StopTech front pads"] },
-      { "category": "Interior", "items": ["Recaro Sportster CS seats", "Momo shift knob"] }
+      {
+        "category": "Suspension",
+        "items": [
+          "Bilstein B16 PSS10 coilovers",
+          "UUC subframe reinforcement"
+        ]
+      },
+      {
+        "category": "Wheels & Brakes",
+        "items": [
+          "OEM Style 67 18\" (refinished)",
+          "StopTech front pads"
+        ]
+      },
+      {
+        "category": "Interior",
+        "items": [
+          "Recaro Sportster CS seats",
+          "Momo shift knob"
+        ]
+      }
     ],
     "bestLapTrackId": null,
     "bestLapTime": null

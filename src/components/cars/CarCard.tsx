@@ -6,7 +6,7 @@ export function CarCard({ car }: { car: Car }) {
   return (
     <Link
       href={`/cars/${car.id}`}
-      className="group relative flex h-56 w-64 shrink-0 snap-start flex-col justify-end overflow-hidden rounded-card border border-border bg-surface-2"
+      className="group relative flex h-56 w-64 shrink-0 snap-start flex-col justify-end overflow-hidden rounded-card border border-border bg-surface-2 transition-all duration-200 ease-out-fast hover:-translate-y-0.5 hover:border-text-muted/40 hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
     >
       <Image
         src={car.heroImage}

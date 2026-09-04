@@ -22,7 +22,7 @@ export function ProfileHeader({
         {user.location}
       </div>
 
-      <div className="mt-2 flex w-full max-w-sm items-stretch justify-around rounded-card border border-border bg-surface-1 py-4">
+      <div className="mt-2 flex w-full max-w-sm items-stretch justify-around rounded-card border border-border bg-surface-1 py-4 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
         {stats.map((s) => (
           <div key={s.label} className="flex flex-col items-center gap-0.5">
             <span className="font-display text-heading text-text-primary">{s.value}</span>

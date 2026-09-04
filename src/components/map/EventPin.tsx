@@ -6,7 +6,7 @@
 // and timing system as the rest of the app.
 import type { EventCategory } from "@/types";
 
-const CATEGORY_COLOR: Record<EventCategory, string> = {
+export const CATEGORY_COLOR: Record<EventCategory, string> = {
   "track-day": "#FF7A45",
   "time-attack": "#E24B4A",
   "cars-coffee": "#4A9B6E",

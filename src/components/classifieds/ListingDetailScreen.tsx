@@ -77,7 +77,7 @@ export function ListingDetailScreen({ listingId }: { listingId: string }) {
         <p className="text-body leading-relaxed text-text-secondary">{listing.description}</p>
       </div>
 
-      <div className="mt-5 rounded-card border border-border bg-surface-1 p-4">
+      <div className="mt-5 rounded-card border border-border bg-surface-1 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
         <p className="text-caption text-text-muted">Fitment</p>
         <p className="text-body text-text-primary">{listing.fitment}</p>
       </div>
@@ -85,7 +85,7 @@ export function ListingDetailScreen({ listingId }: { listingId: string }) {
       {seller && (
         <div className="mt-6">
           <h2 className="mb-2 text-heading text-text-primary">Vendedor</h2>
-          <div className="flex items-center gap-3 rounded-card border border-border bg-surface-1 p-3">
+          <div className="flex items-center gap-3 rounded-card border border-border bg-surface-1 p-3 shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
             <Avatar src={seller.avatar} alt={seller.name} size={40} />
             <div className="flex-1">
               <p className="text-body text-text-primary">{seller.name}</p>

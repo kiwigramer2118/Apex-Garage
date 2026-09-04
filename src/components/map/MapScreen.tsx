@@ -9,7 +9,10 @@ import { useAppStore } from "@/store/useAppStore";
 import { FilterChips } from "./FilterChips";
 import { BottomSheet } from "@/components/ui/BottomSheet";
 import { EventSheetContent } from "./EventSheetContent";
+import { IllustratedMap } from "./IllustratedMap";
 import { OnboardingBanner } from "@/components/onboarding/OnboardingBanner";
+
+const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
 const LiveMap = dynamic(() => import("./LiveMap").then((m) => m.LiveMap), {
   ssr: false,
@@ -41,12 +44,21 @@ export function MapScreen() {
 
   return (
     <div className="relative h-dvh w-full overflow-hidden">
-      <LiveMap
-        events={allEvents}
-        activeEventIds={activeEventIds}
-        selectedEventId={selectedEventId}
-        onSelectEvent={setSelectedEventId}
-      />
+      {MAPBOX_TOKEN ? (
+        <LiveMap
+          events={allEvents}
+          activeEventIds={activeEventIds}
+          selectedEventId={selectedEventId}
+          onSelectEvent={setSelectedEventId}
+        />
+      ) : (
+        <IllustratedMap
+          events={allEvents}
+          activeEventIds={activeEventIds}
+          selectedEventId={selectedEventId}
+          onSelectEvent={(id) => setSelectedEventId(id ?? null)}
+        />
+      )}
 
       {/* Floating UI over the map canvas */}
       <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex flex-col gap-1 pt-[calc(env(safe-area-inset-top)+16px)]">
@@ -66,9 +78,11 @@ export function MapScreen() {
         </div>
       </div>
 
-      <BottomSheet open={!!selectedEvent} onClose={() => setSelectedEventId(null)}>
-        {selectedEvent && <EventSheetContent event={selectedEvent} />}
-      </BottomSheet>
+      {MAPBOX_TOKEN && (
+        <BottomSheet open={!!selectedEvent} onClose={() => setSelectedEventId(null)}>
+          {selectedEvent && <EventSheetContent event={selectedEvent} />}
+        </BottomSheet>
+      )}
     </div>
   );
 }
