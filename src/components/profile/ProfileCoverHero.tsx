@@ -17,7 +17,7 @@ interface ProfileCoverHeroProps {
 }
 
 // Cover + avatar + identity block for the unified Profile/Garage screen.
-// Deliberately leads with "Miembro desde" instead of age, and role is a
+// Deliberately leads with "Member since" instead of age, and role is a
 // self-declared identity chip (never a platform-granted badge) per spec.
 export function ProfileCoverHero({ user, stats, isOwnProfile }: ProfileCoverHeroProps) {
   const { scrollY } = useScroll();
@@ -58,7 +58,7 @@ export function ProfileCoverHero({ user, stats, isOwnProfile }: ProfileCoverHero
               type="button"
               className="mb-1 rounded-button border border-border bg-surface-1/90 px-4 py-2 text-caption text-text-primary backdrop-blur-sm transition-colors duration-150 hover:bg-surface-2"
             >
-              Editar perfil
+              Edit profile
             </button>
           ) : (
             <FollowButton />
@@ -78,7 +78,7 @@ export function ProfileCoverHero({ user, stats, isOwnProfile }: ProfileCoverHero
             <MapPin size={13} strokeWidth={1.75} />
             {user.location}
           </span>
-          <span>Miembro desde {formatMemberSince(user.memberSince)}</span>
+          <span>Member since {formatMemberSince(user.memberSince)}</span>
         </div>
 
         {socialEntries.length > 0 && (
@@ -118,7 +118,7 @@ function FollowButton() {
         following ? "bg-surface-3 text-text-primary" : "bg-accent text-onaccent hover:bg-accent-hover"
       }`}
     >
-      {following ? "Siguiendo" : "Seguir"}
+      {following ? "Following" : "Follow"}
     </button>
   );
 }

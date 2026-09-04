@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/Badge";
 // counter or leaderboard position.
 export function EventsAttendedList({ events }: { events: TrackEvent[] }) {
   if (events.length === 0) {
-    return <p className="text-body text-text-muted">Todavía no asiste a eventos.</p>;
+    return <p className="text-body text-text-muted">Hasn't attended any events yet.</p>;
   }
 
   return (

@@ -35,7 +35,7 @@ export function CarCard({ car, featured }: { car: Car; featured?: boolean }) {
         {featured && (
           <span className="flex items-center gap-1 rounded-pill bg-surface-1/85 px-2.5 py-1 text-caption text-text-secondary backdrop-blur-sm">
             <Star size={11} className="fill-accent text-accent-ink" />
-            Destacado
+            Featured
           </span>
         )}
       </div>

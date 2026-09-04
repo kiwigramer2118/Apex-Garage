@@ -37,7 +37,7 @@ export default function CarProfilePage({ params }: { params: { carId: string } }
             <div className="text-right">
               <div className="flex items-center justify-end gap-1.5 text-caption text-text-muted">
                 <Timer size={13} />
-                Mejor vuelta
+                Best lap
               </div>
               <p className="font-display text-heading text-accent-ink">{car.bestLapTime}</p>
               {track && <p className="text-caption text-text-muted">{track.shortName}</p>}
@@ -46,7 +46,7 @@ export default function CarProfilePage({ params }: { params: { carId: string } }
             <div className="text-right">
               <div className="flex items-center justify-end gap-1.5 text-caption text-text-muted">
                 <Gauge size={13} />
-                Sin tiempo aún
+                No time yet
               </div>
             </div>
           )}
@@ -55,7 +55,7 @@ export default function CarProfilePage({ params }: { params: { carId: string } }
         <SpecsAccordion specs={car.specs} mods={car.mods} />
 
         <div className="mt-6">
-          <h2 className="mb-3 text-heading text-text-primary">Galería</h2>
+          <h2 className="mb-3 text-heading text-text-primary">Gallery</h2>
           <GalleryLightbox images={car.gallery} alt={`${car.make} ${car.model}`} />
         </div>
       </div>

@@ -29,9 +29,9 @@ export function ListingDetailScreen({ listingId }: { listingId: string }) {
   if (!listing) {
     return (
       <div className="flex h-dvh flex-col items-center justify-center gap-3 px-6 text-center">
-        <p className="text-body text-text-secondary">No encontramos esta publicación.</p>
+        <p className="text-body text-text-secondary">We couldn't find this listing.</p>
         <Link href="/classifieds" className="text-caption text-accent-ink underline underline-offset-2">
-          Volver a clasificados
+          Back to classifieds
         </Link>
       </div>
     );
@@ -59,7 +59,7 @@ export function ListingDetailScreen({ listingId }: { listingId: string }) {
       <div className="mt-5">
         <div className="mb-1 flex items-center gap-2">
           <Badge tone="accent">{LISTING_CONDITION_LABEL[listing.condition]}</Badge>
-          {listing.negotiable && <Badge tone="muted">Negociable</Badge>}
+          {listing.negotiable && <Badge tone="muted">Negotiable</Badge>}
         </div>
         <h1 className="font-display text-title text-text-primary">{listing.title}</h1>
         <p className="mt-1 font-display text-display text-accent-ink">{formatPrice(listing.priceUsd)}</p>
@@ -69,11 +69,11 @@ export function ListingDetailScreen({ listingId }: { listingId: string }) {
         <MapPin size={14} />
         <span>{listing.location}</span>
         <span>·</span>
-        <span>Publicado {timeAgo(listing.postedAt)}</span>
+        <span>Posted {timeAgo(listing.postedAt)}</span>
       </div>
 
       <div className="mt-6">
-        <h2 className="mb-2 text-heading text-text-primary">Descripción</h2>
+        <h2 className="mb-2 text-heading text-text-primary">Description</h2>
         <p className="text-body leading-relaxed text-text-secondary">{listing.description}</p>
       </div>
 
@@ -84,7 +84,7 @@ export function ListingDetailScreen({ listingId }: { listingId: string }) {
 
       {seller && (
         <div className="mt-6">
-          <h2 className="mb-2 text-heading text-text-primary">Vendedor</h2>
+          <h2 className="mb-2 text-heading text-text-primary">Seller</h2>
           <div className="flex items-center gap-3 rounded-card border border-border bg-surface-1 p-3 shadow-[0_4px_20px_rgba(0,0,0,0.07)]">
             <Link href={`/profile/${seller.id}`} className="flex flex-1 items-center gap-3">
               <Avatar alt={seller.name} size={40} />
@@ -95,7 +95,7 @@ export function ListingDetailScreen({ listingId }: { listingId: string }) {
             </Link>
             {car && (
               <Link href={`/cars/${car.id}`} className="text-caption text-accent-ink underline underline-offset-2">
-                Ver su {car.model}
+                See their {car.model}
               </Link>
             )}
           </div>
@@ -106,7 +106,7 @@ export function ListingDetailScreen({ listingId }: { listingId: string }) {
         type="button"
         className="mt-8 w-full rounded-button bg-accent py-3.5 text-body text-onaccent transition-colors duration-150 hover:bg-accent-hover"
       >
-        Contactar vendedor
+        Contact seller
       </button>
     </div>
   );

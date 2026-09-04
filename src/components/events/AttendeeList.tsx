@@ -19,7 +19,7 @@ export function AttendeeList({ attendeeIds, capacity }: { attendeeIds: string[];
       >
         <StackedAvatars avatars={preview} extraCount={Math.max(users.length - preview.length, 0)} size={32} />
         <span className="text-caption text-text-muted">
-          {users.length}/{capacity} confirmados
+          {users.length}/{capacity} confirmed
         </span>
       </button>
 

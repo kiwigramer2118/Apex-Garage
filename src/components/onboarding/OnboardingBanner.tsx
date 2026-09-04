@@ -23,12 +23,12 @@ export function OnboardingBanner() {
         >
           <Sparkles size={14} className="shrink-0 text-accent-ink" />
           <Link href="/onboarding" className="flex-1 text-caption text-text-primary">
-            Nuevo en Apex Garage — ve el recorrido rápido
+            New to Apex Garage — take the quick tour
           </Link>
           <button
             type="button"
             onClick={completeOnboarding}
-            aria-label="Cerrar"
+            aria-label="Close"
             className="text-text-muted"
           >
             <X size={14} />

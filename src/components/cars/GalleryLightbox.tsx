@@ -27,7 +27,7 @@ export function GalleryLightbox({ images, alt }: { images: string[]; alt: string
           >
             <Image
               src={src}
-              alt={`${alt} — foto ${i + 1}`}
+              alt={`${alt} — photo ${i + 1}`}
               fill
               className="object-cover transition-transform duration-200 ease-out-fast hover:scale-[1.03]"
               sizes="(min-width: 1024px) 320px, 50vw"
@@ -49,7 +49,7 @@ export function GalleryLightbox({ images, alt }: { images: string[]; alt: string
             <button
               type="button"
               onClick={() => setOpenIndex(null)}
-              aria-label="Cerrar"
+              aria-label="Close"
               className="absolute right-4 top-[calc(env(safe-area-inset-top)+16px)] flex h-9 w-9 items-center justify-center rounded-full bg-surface-1/80 text-text-primary"
             >
               <X size={18} strokeWidth={1.75} />
@@ -61,7 +61,7 @@ export function GalleryLightbox({ images, alt }: { images: string[]; alt: string
                 e.stopPropagation();
                 prev();
               }}
-              aria-label="Anterior"
+              aria-label="Previous"
               className="absolute left-3 flex h-9 w-9 items-center justify-center rounded-full bg-surface-1/80 text-text-primary"
             >
               <ChevronLeft size={19} strokeWidth={1.75} />
@@ -85,7 +85,7 @@ export function GalleryLightbox({ images, alt }: { images: string[]; alt: string
             >
               <Image
                 src={images[openIndex]}
-                alt={`${alt} — foto ${openIndex + 1}`}
+                alt={`${alt} — photo ${openIndex + 1}`}
                 fill
                 className="object-contain"
                 sizes="90vw"
@@ -98,7 +98,7 @@ export function GalleryLightbox({ images, alt }: { images: string[]; alt: string
                 e.stopPropagation();
                 next();
               }}
-              aria-label="Siguiente"
+              aria-label="Next"
               className="absolute right-3 flex h-9 w-9 items-center justify-center rounded-full bg-surface-1/80 text-text-primary"
             >
               <ChevronRight size={19} strokeWidth={1.75} />

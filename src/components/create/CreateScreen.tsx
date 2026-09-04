@@ -21,7 +21,7 @@ export function CreateScreen() {
   const router = useRouter();
 
   function handlePublished(kind: "event" | "listing", redirectHref: string) {
-    setSuccessLabel(kind === "event" ? "Tu evento fue publicado" : "Tu clasificado fue publicado");
+    setSuccessLabel(kind === "event" ? "Your event was published" : "Your listing was published");
     setStep("success");
     setTimeout(() => router.push(redirectHref), 1400);
   }
@@ -31,8 +31,8 @@ export function CreateScreen() {
       <AnimatePresence mode="wait">
         {step === "choose" && (
           <motion.div key="choose" {...stepVariants} transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}>
-            <h1 className="mb-1 font-display text-title text-text-primary">Crear</h1>
-            <p className="mb-6 text-body text-text-secondary">¿Qué quieres publicar?</p>
+            <h1 className="mb-1 font-display text-title text-text-primary">Create</h1>
+            <p className="mb-6 text-body text-text-secondary">What do you want to publish?</p>
 
             <div className="flex flex-col gap-3">
               <button
@@ -44,9 +44,9 @@ export function CreateScreen() {
                   <CalendarPlus size={20} strokeWidth={1.75} />
                 </span>
                 <span>
-                  <span className="block text-body text-text-primary">Evento</span>
+                  <span className="block text-body text-text-primary">Event</span>
                   <span className="block text-caption text-text-muted">
-                    Track day, time attack, meet o cars &amp; coffee
+                    Track day, time attack, meet, or cars &amp; coffee
                   </span>
                 </span>
               </button>
@@ -60,9 +60,9 @@ export function CreateScreen() {
                   <Tag size={20} strokeWidth={1.75} />
                 </span>
                 <span>
-                  <span className="block text-body text-text-primary">Clasificado</span>
+                  <span className="block text-body text-text-primary">Listing</span>
                   <span className="block text-caption text-text-muted">
-                    Vende una pieza a tu propia comunidad
+                    Sell a part to your own community
                   </span>
                 </span>
               </button>

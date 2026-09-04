@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 export type GarageFilter = "all" | CarStatus;
 
 const OPTIONS: GarageFilter[] = ["all", "current", "project", "sold"];
-const LABEL: Record<GarageFilter, string> = { all: "Todos", ...CAR_STATUS_LABEL } as Record<GarageFilter, string>;
+const LABEL: Record<GarageFilter, string> = { all: "All", ...CAR_STATUS_LABEL } as Record<GarageFilter, string>;
 
 // Sliding-indicator segmented control — same layoutId pattern as the bottom
 // tab bar's active indicator, so it reads as part of the same motion

@@ -8,9 +8,9 @@ import { ActivityFeed } from "./ActivityFeed";
 import { GalleryLightbox } from "@/components/cars/GalleryLightbox";
 
 const SETTINGS = [
-  { icon: Bell, label: "Notificaciones" },
-  { icon: Lock, label: "Privacidad" },
-  { icon: LogOut, label: "Cerrar sesión" },
+  { icon: Bell, label: "Notifications" },
+  { icon: Lock, label: "Privacy" },
+  { icon: LogOut, label: "Log out" },
 ];
 
 // The single Profile + Garage screen — a Garage is a section of a Profile,
@@ -33,9 +33,9 @@ export function UserProfileScreen({ userId }: { userId: string }) {
         user={user}
         isOwnProfile={isOwnProfile}
         stats={[
-          { label: "Autos", value: myCars.length },
-          { label: "Seguidores", value: user.followerCount },
-          { label: "Siguiendo", value: user.followingCount },
+          { label: "Cars", value: myCars.length },
+          { label: "Followers", value: user.followerCount },
+          { label: "Following", value: user.followingCount },
         ]}
       />
 
@@ -43,7 +43,7 @@ export function UserProfileScreen({ userId }: { userId: string }) {
         <section className="mt-8">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="text-heading text-text-primary">Garage</h2>
-            {featuredCar && <span className="text-caption text-text-muted">{featuredCar.nickname} destacado</span>}
+            {featuredCar && <span className="text-caption text-text-muted">{featuredCar.nickname} featured</span>}
           </div>
           <GarageSection cars={myCars} featuredCarId={user.featuredCarId} />
         </section>
@@ -52,7 +52,7 @@ export function UserProfileScreen({ userId }: { userId: string }) {
           <section className="mt-8">
             <div className="mb-3 flex items-center gap-2">
               <Users size={16} className="text-text-muted" strokeWidth={1.75} />
-              <h2 className="text-heading text-text-primary">Comunidades</h2>
+              <h2 className="text-heading text-text-primary">Communities</h2>
             </div>
             <div className="flex flex-wrap gap-2">
               {user.communities.map((c) => (
@@ -71,25 +71,25 @@ export function UserProfileScreen({ userId }: { userId: string }) {
           <section className="mt-8">
             <div className="mb-3 flex items-center gap-2">
               <Images size={16} className="text-text-muted" strokeWidth={1.75} />
-              <h2 className="text-heading text-text-primary">Galería</h2>
+              <h2 className="text-heading text-text-primary">Gallery</h2>
             </div>
             <GalleryLightbox images={user.galleryImages} alt={user.name} />
           </section>
         )}
 
         <section className="mt-8">
-          <h2 className="mb-3 text-heading text-text-primary">Eventos asistidos</h2>
+          <h2 className="mb-3 text-heading text-text-primary">Events attended</h2>
           <EventsAttendedList events={attendedEvents} />
         </section>
 
         <section className="mt-8">
-          <h2 className="mb-3 text-heading text-text-primary">Actividad reciente</h2>
+          <h2 className="mb-3 text-heading text-text-primary">Recent activity</h2>
           <ActivityFeed items={activity} />
         </section>
 
         {isOwnProfile && (
           <section className="mt-8">
-            <h2 className="mb-3 text-heading text-text-primary">Cuenta</h2>
+            <h2 className="mb-3 text-heading text-text-primary">Account</h2>
             <div className="overflow-hidden rounded-card border border-border">
               {SETTINGS.map((item, i) => (
                 <button
@@ -108,7 +108,7 @@ export function UserProfileScreen({ userId }: { userId: string }) {
           </section>
         )}
 
-        <p className="mt-8 text-center text-caption text-text-muted">Apex Garage · PoC de portafolio</p>
+        <p className="mt-8 text-center text-caption text-text-muted">Apex Garage · Portfolio PoC</p>
       </div>
     </div>
   );

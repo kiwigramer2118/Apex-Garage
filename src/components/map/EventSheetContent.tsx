@@ -26,7 +26,7 @@ export function EventSheetContent({ event }: { event: TrackEvent }) {
         <div>
           <div className="mb-1.5 flex items-center gap-2">
             <Badge tone="accent">{EVENT_CATEGORY_LABEL[event.category]}</Badge>
-            {event.isLive && <Badge tone="success">● En vivo</Badge>}
+            {event.isLive && <Badge tone="success">● Live</Badge>}
           </div>
           <h2 className="font-display text-title text-text-primary">{event.title}</h2>
         </div>
@@ -48,7 +48,7 @@ export function EventSheetContent({ event }: { event: TrackEvent }) {
       <div className="flex items-center justify-between">
         <StackedAvatars avatars={attendees} extraCount={Math.max(event.attendeeIds.length - attendees.length, 0)} />
         <span className="text-caption text-text-muted">
-          {event.attendeeIds.length}/{event.capacity} confirmados
+          {event.attendeeIds.length}/{event.capacity} confirmed
         </span>
       </div>
 
@@ -62,7 +62,7 @@ export function EventSheetContent({ event }: { event: TrackEvent }) {
         href={`/events/${event.id}`}
         className="text-center text-caption text-text-muted underline underline-offset-2"
       >
-        Ver detalle completo
+        View full details
       </Link>
     </div>
   );

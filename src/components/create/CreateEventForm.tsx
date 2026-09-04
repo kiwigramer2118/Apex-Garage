@@ -53,7 +53,7 @@ export function CreateEventForm({
       endTime,
       lat: track.lat,
       lng: track.lng,
-      description: description.trim() || "Sin descripción todavía.",
+      description: description.trim() || "No description yet.",
       hostId: CURRENT_USER_ID,
       capacity,
       attendeeIds: [CURRENT_USER_ID],
@@ -69,22 +69,22 @@ export function CreateEventForm({
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <button type="button" onClick={onBack} className="flex items-center gap-1 text-caption text-text-muted">
-        <ChevronLeft size={15} /> Volver
+        <ChevronLeft size={15} /> Back
       </button>
-      <h1 className="font-display text-title text-text-primary">Nuevo evento</h1>
+      <h1 className="font-display text-title text-text-primary">New event</h1>
 
-      <FormField label="Título">
+      <FormField label="Title">
         <input
           className={inputClass}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="Ej. Buttonwillow Sunset Lapping"
+          placeholder="E.g. Buttonwillow Sunset Lapping"
           required
         />
       </FormField>
 
       <div className="grid grid-cols-2 gap-3">
-        <FormField label="Categoría">
+        <FormField label="Category">
           <select
             className={inputClass}
             value={category}
@@ -98,7 +98,7 @@ export function CreateEventForm({
           </select>
         </FormField>
 
-        <FormField label="Pista">
+        <FormField label="Track">
           <select
             className={inputClass}
             value={trackId}
@@ -113,12 +113,12 @@ export function CreateEventForm({
         </FormField>
       </div>
 
-      <FormField label="Fecha">
+      <FormField label="Date">
         <input className={inputClass} type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
       </FormField>
 
       <div className="grid grid-cols-2 gap-3">
-        <FormField label="Hora de inicio">
+        <FormField label="Start time">
           <input
             className={inputClass}
             type="time"
@@ -126,13 +126,13 @@ export function CreateEventForm({
             onChange={(e) => setStartTime(e.target.value)}
           />
         </FormField>
-        <FormField label="Hora de fin">
+        <FormField label="End time">
           <input className={inputClass} type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
         </FormField>
       </div>
 
       <div className="grid grid-cols-2 gap-3">
-        <FormField label="Cupo">
+        <FormField label="Capacity">
           <input
             className={inputClass}
             type="number"
@@ -141,25 +141,25 @@ export function CreateEventForm({
             onChange={(e) => setCapacity(Number(e.target.value))}
           />
         </FormField>
-        <FormField label="Precio (USD, opcional)">
+        <FormField label="Price (USD, optional)">
           <input
             className={inputClass}
             type="number"
             min={0}
-            placeholder="Gratis"
+            placeholder="Free"
             value={priceUsd}
             onChange={(e) => setPriceUsd(e.target.value)}
           />
         </FormField>
       </div>
 
-      <FormField label="Descripción">
+      <FormField label="Description">
         <textarea
           className={inputClass}
           rows={4}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          placeholder="Detalles del run group, tech inspection, punto de encuentro…"
+          placeholder="Run group details, tech inspection, meeting point…"
         />
       </FormField>
 
@@ -168,7 +168,7 @@ export function CreateEventForm({
         disabled={!canSubmit}
         className="mt-2 w-full rounded-button bg-accent py-3.5 text-body text-onaccent transition-colors duration-150 hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Publicar evento
+        Publish event
       </button>
     </form>
   );

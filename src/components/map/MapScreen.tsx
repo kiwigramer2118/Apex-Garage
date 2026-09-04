@@ -64,11 +64,11 @@ export function MapScreen() {
       <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex flex-col gap-1 pt-[calc(env(safe-area-inset-top)+16px)]">
         <div className="pointer-events-auto mx-4 flex items-center gap-3 rounded-pill border border-border bg-surface-1/90 px-4 py-3 backdrop-blur-md">
           <Search size={17} className="text-text-muted" strokeWidth={1.75} />
-          <span className="flex-1 text-body text-text-muted">Buscar eventos, pistas, garages…</span>
+          <span className="flex-1 text-body text-text-muted">Search events, tracks, garages…</span>
           {liveCount > 0 && (
             <span className="flex items-center gap-1.5 text-caption text-success">
               <span className="h-1.5 w-1.5 rounded-full bg-success" />
-              {liveCount} en vivo
+              {liveCount} live
             </span>
           )}
         </div>

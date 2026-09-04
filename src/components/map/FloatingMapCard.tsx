@@ -51,7 +51,7 @@ export function FloatingMapCard({ anchor, containerSize, onClose, children }: Fl
       <button
         type="button"
         onClick={onClose}
-        aria-label="Cerrar"
+        aria-label="Close"
         className="absolute right-2 top-2 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-bg/70 text-text-secondary backdrop-blur-sm transition-colors duration-150 hover:text-text-primary"
       >
         <X size={14} strokeWidth={1.75} />

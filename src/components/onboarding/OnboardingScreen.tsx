@@ -9,18 +9,18 @@ import { useAppStore } from "@/store/useAppStore";
 const SLIDES = [
   {
     icon: Map,
-    title: "Encuentra qué está pasando, ahora",
-    body: "Un mapa en vivo de track days, time attack y meets en toda la escena de SoCal — para improvisar cuando tienes tiempo libre.",
+    title: "Find out what's happening, now",
+    body: "A live map of track days, time attacks, and meets across the SoCal scene — for when you've got free time and want to improvise.",
   },
   {
     icon: Car,
-    title: "Tu garage, como se ve tu auto",
-    body: "Un perfil real para tu auto: specs, mods y galería. Un lugar que se ve tan bien como se siente manejarlo.",
+    title: "Your garage, the way your car deserves",
+    body: "A real profile for your car: specs, mods, and gallery. A place that looks as good as it feels to drive.",
   },
   {
     icon: Tag,
-    title: "Vende dentro de tu comunidad",
-    body: "Clasificados ligeros para piezas que ya no usas — directo a la gente que sabe exactamente qué es.",
+    title: "Sell within your community",
+    body: "Lightweight classifieds for parts you're not using anymore — straight to people who know exactly what they are.",
   },
 ];
 
@@ -45,7 +45,7 @@ export function OnboardingScreen() {
           <span className="font-display text-heading">A</span>
         </div>
         <button type="button" onClick={finish} className="text-caption text-text-muted">
-          Saltar
+          Skip
         </button>
       </div>
 
@@ -84,7 +84,7 @@ export function OnboardingScreen() {
           onClick={() => (isLast ? finish() : setIndex((i) => i + 1))}
           className="w-full max-w-xs rounded-button bg-accent py-3.5 text-body text-onaccent transition-colors duration-150 hover:bg-accent-hover"
         >
-          {isLast ? "Empezar" : "Siguiente"}
+          {isLast ? "Get started" : "Next"}
         </button>
       </div>
     </div>

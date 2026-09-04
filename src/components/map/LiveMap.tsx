@@ -141,11 +141,11 @@ export function LiveMap({ events, activeEventIds, selectedEventId, onSelectEvent
           <span className="text-heading">◎</span>
         </div>
         <p className="max-w-xs text-body text-text-secondary">
-          Agrega tu Mapbox token en{" "}
+          Add your Mapbox token in{" "}
           <code className="rounded bg-surface-3 px-1.5 py-0.5 text-caption text-text-primary">
             .env.local
           </code>{" "}
-          como <code className="rounded bg-surface-3 px-1.5 py-0.5 text-caption text-text-primary">NEXT_PUBLIC_MAPBOX_TOKEN</code> para ver el mapa en vivo.
+          as <code className="rounded bg-surface-3 px-1.5 py-0.5 text-caption text-text-primary">NEXT_PUBLIC_MAPBOX_TOKEN</code> to see the live map.
         </p>
         <a
           href="https://account.mapbox.com/access-tokens/"
@@ -153,7 +153,7 @@ export function LiveMap({ events, activeEventIds, selectedEventId, onSelectEvent
           rel="noreferrer"
           className="text-caption text-accent-ink underline underline-offset-2"
         >
-          Obtener un token gratis
+          Get a free token
         </a>
       </div>
     );

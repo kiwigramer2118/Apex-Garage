@@ -34,7 +34,7 @@ export function ImageCarousel({ images, alt }: { images: string[]; alt: string }
         >
           <Image
             src={images[index]}
-            alt={`${alt} — foto ${index + 1}`}
+            alt={`${alt} — photo ${index + 1}`}
             fill
             priority
             className="object-cover"
@@ -50,7 +50,7 @@ export function ImageCarousel({ images, alt }: { images: string[]; alt: string }
               key={i}
               type="button"
               onClick={() => setIndex(i)}
-              aria-label={`Ir a foto ${i + 1}`}
+              aria-label={`Go to photo ${i + 1}`}
               className={`h-1.5 rounded-pill transition-all duration-200 ease-out-fast ${
                 i === index ? "w-4 bg-accent" : "w-1.5 bg-white/40"
               }`}

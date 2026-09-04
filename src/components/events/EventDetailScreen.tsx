@@ -26,9 +26,9 @@ export function EventDetailScreen({ eventId }: { eventId: string }) {
   if (!event) {
     return (
       <div className="flex h-dvh flex-col items-center justify-center gap-3 px-6 text-center">
-        <p className="text-body text-text-secondary">No encontramos este evento.</p>
+        <p className="text-body text-text-secondary">We couldn't find this event.</p>
         <Link href="/" className="text-caption text-accent-ink underline underline-offset-2">
-          Volver al mapa
+          Back to the map
         </Link>
       </div>
     );
@@ -53,7 +53,7 @@ export function EventDetailScreen({ eventId }: { eventId: string }) {
       <div className="mx-auto max-w-2xl px-5 pt-5">
         <div className="mb-2 flex items-center gap-2">
           <Badge tone="accent">{EVENT_CATEGORY_LABEL[event.category]}</Badge>
-          {event.isLive && <Badge tone="success">● En vivo ahora</Badge>}
+          {event.isLive && <Badge tone="success">● Live now</Badge>}
         </div>
         <h1 className="font-display text-title text-text-primary">{event.title}</h1>
 
@@ -70,13 +70,13 @@ export function EventDetailScreen({ eventId }: { eventId: string }) {
           >
             <MapPin size={17} className="shrink-0 text-text-muted" strokeWidth={1.75} />
             <span className="flex-1">{track ? `${track.name}, ${track.city}` : "SoCal"}</span>
-            <span className="text-caption text-accent-ink">Ver en mapa</span>
+            <span className="text-caption text-accent-ink">View on map</span>
           </Link>
           {host && (
             <div className="flex items-center gap-3 text-body text-text-secondary">
               <UserIcon size={17} className="shrink-0 text-text-muted" strokeWidth={1.75} />
               <span>
-                Organiza <span className="text-text-primary">{host.name}</span>
+                Hosted by <span className="text-text-primary">{host.name}</span>
               </span>
             </div>
           )}
@@ -96,18 +96,18 @@ export function EventDetailScreen({ eventId }: { eventId: string }) {
         )}
 
         <div className="mt-6">
-          <h2 className="mb-2 text-heading text-text-primary">Sobre el evento</h2>
+          <h2 className="mb-2 text-heading text-text-primary">About this event</h2>
           <p className="text-body leading-relaxed text-text-secondary">{event.description}</p>
         </div>
 
         <div className="mt-6">
-          <h2 className="mb-3 text-heading text-text-primary">Asistentes</h2>
+          <h2 className="mb-3 text-heading text-text-primary">Attendees</h2>
           <AttendeeList attendeeIds={event.attendeeIds} capacity={event.capacity} />
         </div>
 
         <div className="mt-8 flex items-center gap-3 border-t border-border pt-5">
           <div className="flex-1">
-            <p className="text-caption text-text-muted">Entrada</p>
+            <p className="text-caption text-text-muted">Entry</p>
             <p className="font-display text-heading text-text-primary">{formatPrice(event.priceUsd)}</p>
           </div>
           <RSVPButton eventId={event.id} />

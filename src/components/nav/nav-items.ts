@@ -8,9 +8,9 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
-  { href: "/", label: "Mapa", icon: Map },
+  { href: "/", label: "Map", icon: Map },
   { href: "/garage", label: "Garage", icon: Car },
-  { href: "/create", label: "Crear", icon: PlusCircle },
-  { href: "/classifieds", label: "Clasificados", icon: Tag },
-  { href: "/profile", label: "Perfil", icon: User },
+  { href: "/create", label: "Create", icon: PlusCircle },
+  { href: "/classifieds", label: "Classifieds", icon: Tag },
+  { href: "/profile", label: "Profile", icon: User },
 ];

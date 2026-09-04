@@ -29,7 +29,7 @@ export function GarageSection({ cars, featuredCarId }: { cars: Car[]; featuredCa
   if (cars.length === 0) {
     return (
       <div className="flex h-40 items-center justify-center rounded-card border border-dashed border-border text-body text-text-muted">
-        Todavía no hay autos en este garage.
+        No cars in this garage yet.
       </div>
     );
   }
@@ -42,7 +42,7 @@ export function GarageSection({ cars, featuredCarId }: { cars: Car[]; featuredCa
 
       {filtered.length === 0 ? (
         <div className="flex h-32 items-center justify-center rounded-card border border-dashed border-border text-body text-text-muted">
-          Sin autos en esta categoría.
+          No cars in this category.
         </div>
       ) : (
         <div className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-1">

@@ -51,8 +51,8 @@ export interface CarModCategory {
   items: string[];
 }
 
-// Actual = daily/track driver right now. Proyecto = mid-build. Histórico =
-// past build the owner chooses to keep documented rather than delete —
+// Current = daily/track driver right now. Project = mid-build. Past =
+// a former build the owner chooses to keep documented rather than delete —
 // identity/trajectory, not a database of only what's currently owned.
 export type CarStatus = "current" | "project" | "sold";
 

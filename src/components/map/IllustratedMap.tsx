@@ -4,10 +4,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { Car as CarIcon, Clock, Compass, MapPin, Minus, Plus, RotateCcw } from "lucide-react";
+import { Car as CarIcon, Clock, Compass, MapPin, Minus, Plus, RotateCcw, Trees } from "lucide-react";
 import type { Car, TrackEvent } from "@/types";
 import { cars, getUserById, tracks, EVENT_CATEGORY_LABEL, CAR_STATUS_LABEL } from "@/lib/data";
 import { CITY_COORDS, makeProjector } from "@/lib/geo";
+import { WORLD_NAME, WORLD_STREETS, WORLD_DISTRICTS, SIERRA_ALTA, ALDER_PARK_BLOB, WORLD_BLOCKS } from "@/lib/mapWorld";
 import { CATEGORY_COLOR } from "./EventPin";
 import { FloatingMapCard } from "./FloatingMapCard";
 import { Badge } from "@/components/ui/Badge";
@@ -140,7 +141,7 @@ export function IllustratedMap({ events, activeEventIds, selectedEventId, onSele
   }
 
   // Deep-link support: when `selectedEventId` arrives from outside (e.g. the
-  // "Ver en mapa" link on an event detail page), open that pin's floating
+  // "View on map" link on an event detail page), open that pin's floating
   // card automatically instead of requiring a manual click.
   useEffect(() => {
     if (!selectedEventId) return;
@@ -181,6 +182,40 @@ export function IllustratedMap({ events, activeEventIds, selectedEventId, onSele
         transition={{ type: "tween", duration: draggingRef.current ? 0 : 0.08 }}
       >
         <MapBackdrop trackPositions={trackPositions} />
+
+        {/* World labels — real HTML text (not SVG) so it stays crisp instead
+            of stretching with the viewBox's non-uniform scale. */}
+        <div className="pointer-events-none absolute left-[55%] top-[6%] -translate-x-1/2 -translate-y-1/2 text-center text-[9px] font-medium uppercase tracking-[0.14em] text-accent-ink/70">
+          {SIERRA_ALTA.label}
+        </div>
+        <div className="pointer-events-none absolute left-[11%] top-[58%] flex -translate-x-1/2 -translate-y-1/2 items-center gap-1 text-[9px] font-medium uppercase tracking-[0.14em] text-success/80">
+          <Trees size={10} strokeWidth={2} />
+          Alder Park
+        </div>
+        {WORLD_DISTRICTS.map((d) => (
+          <div
+            key={d.id}
+            className={`pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-[9px] uppercase tracking-[0.14em] ${
+              d.kind === "downtown" ? "font-semibold text-text-primary/70" : "font-medium text-text-muted/70"
+            }`}
+            style={{ left: `${d.x}%`, top: `${d.y}%` }}
+          >
+            {d.label}
+          </div>
+        ))}
+        {WORLD_STREETS.map((s) => (
+          <div
+            key={s.id}
+            className="pointer-events-none absolute whitespace-nowrap text-[7px] font-medium uppercase tracking-[0.12em] text-text-muted/50"
+            style={{
+              left: `${s.labelPos.x}%`,
+              top: `${s.labelPos.y}%`,
+              transform: `translate(-50%, -50%) rotate(${s.labelPos.rotate ?? 0}deg)`,
+            }}
+          >
+            {s.label}
+          </div>
+        ))}
 
         {/* Track landmarks */}
         {trackPositions.map(({ track, xPct, yPct }) => (
@@ -266,7 +301,7 @@ export function IllustratedMap({ events, activeEventIds, selectedEventId, onSele
           type="button"
           onClick={() => zoomBy(0.3)}
           className="flex h-9 w-9 items-center justify-center text-text-secondary transition-colors duration-150 hover:text-text-primary"
-          aria-label="Acercar"
+          aria-label="Zoom in"
         >
           <Plus size={16} strokeWidth={1.75} />
         </button>
@@ -275,7 +310,7 @@ export function IllustratedMap({ events, activeEventIds, selectedEventId, onSele
           type="button"
           onClick={() => zoomBy(-0.3)}
           className="flex h-9 w-9 items-center justify-center text-text-secondary transition-colors duration-150 hover:text-text-primary"
-          aria-label="Alejar"
+          aria-label="Zoom out"
         >
           <Minus size={16} strokeWidth={1.75} />
         </button>
@@ -284,16 +319,30 @@ export function IllustratedMap({ events, activeEventIds, selectedEventId, onSele
           type="button"
           onClick={resetView}
           className="flex h-9 w-9 items-center justify-center text-text-secondary transition-colors duration-150 hover:text-text-primary"
-          aria-label="Restablecer vista"
+          aria-label="Reset view"
         >
           <RotateCcw size={13} strokeWidth={1.75} />
         </button>
       </div>
 
-      {/* Illustrative-map disclosure */}
-      <div className="pointer-events-none absolute bottom-5 left-4 z-20 flex items-center gap-1.5 rounded-pill border border-border/80 bg-surface-1/70 px-2.5 py-1.5 text-[10px] uppercase tracking-wider text-text-muted backdrop-blur-sm">
-        <Compass size={11} strokeWidth={1.75} />
-        Vista ilustrada
+      {/* Map sheet chrome: compass + scale bar + world name — reads as a
+          hand-drawn map's legend, and doubles as the "this is illustrated,
+          not real geography" disclosure. */}
+      <div className="pointer-events-none absolute bottom-5 left-4 z-20 flex items-center gap-3 rounded-card border border-border/80 bg-surface-1/75 px-3 py-2 backdrop-blur-sm">
+        <Compass size={16} strokeWidth={1.5} className="shrink-0 text-text-secondary" />
+        <div className="h-6 w-px bg-border" />
+        <div className="flex flex-col gap-1">
+          <div className="flex items-center gap-1">
+            <div className="flex h-1 w-9 overflow-hidden rounded-full border border-text-muted/50">
+              <span className="w-1/2 bg-text-muted/50" />
+              <span className="w-1/2 bg-transparent" />
+            </div>
+            <span className="text-[8px] uppercase tracking-wider text-text-muted">approx. scale</span>
+          </div>
+          <span className="text-[9px] uppercase tracking-[0.16em] text-text-secondary">
+            {WORLD_NAME} · illustrated view
+          </span>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -346,7 +395,7 @@ function EventCardBody({ event }: { event: TrackEvent }) {
           href={`/events/${event.id}`}
           className="text-center text-caption text-text-muted underline underline-offset-2"
         >
-          Ver detalle completo
+          View full details
         </Link>
       </div>
     </div>
@@ -388,7 +437,7 @@ function CarCardBody({ car, owner }: { car: Car; owner: ReturnType<typeof getUse
           <div className="flex items-center gap-1.5 text-caption text-text-secondary">
             <MapPin size={13} className="shrink-0 text-text-muted" />
             <span>
-              Mejor vuelta {car.bestLapTime} en {tracks.find((t) => t.id === car.bestLapTrackId)?.shortName}
+              Best lap {car.bestLapTime} at {tracks.find((t) => t.id === car.bestLapTrackId)?.shortName}
             </span>
           </div>
         )}
@@ -397,14 +446,14 @@ function CarCardBody({ car, owner }: { car: Car; owner: ReturnType<typeof getUse
             href={`/cars/${car.id}`}
             className="flex-1 rounded-button bg-accent py-2.5 text-center text-caption text-onaccent transition-colors duration-150 hover:bg-accent-hover"
           >
-            Ver auto
+            View car
           </Link>
           {owner && (
             <Link
               href={`/profile/${owner.id}`}
               className="flex-1 rounded-button border border-border py-2.5 text-center text-caption text-text-primary transition-colors duration-150 hover:bg-surface-2"
             >
-              Ver garage
+              View garage
             </Link>
           )}
         </div>
@@ -413,10 +462,14 @@ function CarCardBody({ car, owner }: { car: Car; owner: ReturnType<typeof getUse
   );
 }
 
-// Abstract, non-literal "map" backdrop: dot-grid texture, soft radar-style
-// contour rings around each track landmark, and a winding glow route
-// connecting them — reads as a stylized live map without pretending to be
-// real cartography.
+// "Mesa Verde" — a hand-authored, fictional illustrated town (src/lib/mapWorld.ts):
+// organic city blocks, named streets and districts, a highlands massif and a
+// park, layered under the app's real event/car/track data. Track landmarks
+// get a stylized circuit-ring glyph instead of a literal pin, and a dashed
+// route connects them. It reads as a stylized live map without pretending to
+// be real cartography — see the "Mesa Verde" sheet chrome in the corner.
+const TRACK_RING_ROTATIONS = [-9, 14, -5, 11, -13];
+
 function MapBackdrop({
   trackPositions,
 }: {
@@ -438,33 +491,92 @@ function MapBackdrop({
   return (
     <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
       <defs>
-        <pattern id="apex-dot-grid" width="4" height="4" patternUnits="userSpaceOnUse">
-          <circle cx="0.5" cy="0.5" r="0.35" fill="#16160F" fillOpacity="0.16" />
+        <pattern id="apex-hatch" width="1.5" height="1.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="1.5" stroke="#16160F" strokeOpacity="0.6" strokeWidth="0.16" />
         </pattern>
         <radialGradient id="apex-glow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#B3F22C" stopOpacity="0.24" />
+          <stop offset="0%" stopColor="#B3F22C" stopOpacity="0.26" />
           <stop offset="100%" stopColor="#B3F22C" stopOpacity="0" />
         </radialGradient>
       </defs>
 
       <rect width="100" height="100" fill="#F1F1E8" />
-      <rect width="100" height="100" fill="url(#apex-dot-grid)" />
 
-      {trackPositions.map(({ track, xPct, yPct }) => (
-        <g key={track.id}>
-          <circle cx={xPct} cy={yPct} r="16" fill="url(#apex-glow)" />
-          {[5, 9, 13].map((r) => (
-            <circle key={r} cx={xPct} cy={yPct} r={r} fill="none" stroke="#16160F" strokeOpacity="0.12" strokeWidth="0.2" />
-          ))}
-        </g>
+      {/* Procedural city blocks — hatch-filled organic parcels */}
+      {WORLD_BLOCKS.map((block, i) => (
+        <path
+          key={i}
+          d={block.d}
+          fill="url(#apex-hatch)"
+          fillOpacity={block.opacity}
+          stroke="#16160F"
+          strokeOpacity="0.14"
+          strokeWidth="0.15"
+        />
       ))}
+
+      {/* Alder Park */}
+      <path d={ALDER_PARK_BLOB} fill="#0F9D6B" fillOpacity="0.16" stroke="#0F9D6B" strokeOpacity="0.4" strokeWidth="0.25" />
+
+      {/* Sierra Alta highlands, with a couple of elevation-contour rings */}
+      <path d={SIERRA_ALTA.blobD} fill="#4B6B12" fillOpacity="0.14" stroke="#4B6B12" strokeOpacity="0.32" strokeWidth="0.25" />
+      {[2.4, 4.2].map((r) => (
+        <ellipse
+          key={r}
+          cx={SIERRA_ALTA.cx}
+          cy={SIERRA_ALTA.cy + 2}
+          rx={r * 1.5}
+          ry={r}
+          fill="none"
+          stroke="#4B6B12"
+          strokeOpacity="0.18"
+          strokeWidth="0.14"
+        />
+      ))}
+
+      {/* Named streets */}
+      {WORLD_STREETS.map((street) => (
+        <path
+          key={street.id}
+          d={street.d}
+          fill="none"
+          stroke="#16160F"
+          strokeOpacity={street.variant === "highway" ? 0.3 : 0.18}
+          strokeWidth={street.variant === "highway" ? 0.9 : 0.4}
+          strokeLinecap="round"
+        />
+      ))}
+
+      {/* Track landmarks — stylized circuit-ring glyph instead of a literal pin */}
+      {trackPositions.map(({ track, xPct, yPct }, i) => {
+        const rotate = TRACK_RING_ROTATIONS[i % TRACK_RING_ROTATIONS.length];
+        return (
+          <g key={track.id}>
+            <circle cx={xPct} cy={yPct} r="14" fill="url(#apex-glow)" />
+            <g transform={`rotate(${rotate} ${xPct} ${yPct})`}>
+              <ellipse
+                cx={xPct}
+                cy={yPct}
+                rx="3.4"
+                ry="2.1"
+                fill="#B3F22C"
+                fillOpacity="0.08"
+                stroke="#4B6B12"
+                strokeOpacity="0.55"
+                strokeWidth="0.28"
+              />
+              <line x1={xPct} y1={yPct - 2.1} x2={xPct} y2={yPct - 1.5} stroke="#4B6B12" strokeOpacity="0.55" strokeWidth="0.22" />
+            </g>
+          </g>
+        );
+      })}
 
       {routeD && (
         <path
           d={routeD}
           fill="none"
           stroke="#4B6B12"
-          strokeOpacity="0.35"
+          strokeOpacity="0.4"
           strokeWidth="0.35"
           strokeDasharray="1.2 1.4"
           strokeLinecap="round"

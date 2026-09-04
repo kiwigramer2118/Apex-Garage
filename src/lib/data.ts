@@ -99,7 +99,7 @@ export const LISTING_CONDITION_LABEL: Record<string, string> = {
 };
 
 export const CAR_STATUS_LABEL: Record<string, string> = {
-  current: "Actual",
-  project: "Proyecto",
-  sold: "Histórico",
+  current: "Current",
+  project: "Project",
+  sold: "Past",
 };

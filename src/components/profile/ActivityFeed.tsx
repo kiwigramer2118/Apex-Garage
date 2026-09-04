@@ -9,22 +9,22 @@ function resolveActivity(item: ActivityItem): { text: string; href: string } | n
     case "rsvp": {
       const event = getEventById(item.targetId);
       if (!event) return null;
-      return { text: `Confirmaste asistencia a ${event.title}`, href: `/events/${event.id}` };
+      return { text: `RSVP'd to ${event.title}`, href: `/events/${event.id}` };
     }
     case "listing": {
       const listing = getListingById(item.targetId);
       if (!listing) return null;
-      return { text: `Publicaste ${listing.title}`, href: `/classifieds/${listing.id}` };
+      return { text: `Published ${listing.title}`, href: `/classifieds/${listing.id}` };
     }
     case "car-update": {
       const car = getCarById(item.targetId);
       if (!car) return null;
-      return { text: `Actualizaste el garage de ${car.nickname}`, href: `/cars/${car.id}` };
+      return { text: `Updated ${car.nickname}'s garage`, href: `/cars/${car.id}` };
     }
     case "lap-time": {
       const car = getCarById(item.targetId);
       if (!car) return null;
-      return { text: `Nuevo tiempo registrado con ${car.nickname}`, href: `/cars/${car.id}` };
+      return { text: `New lap time set with ${car.nickname}`, href: `/cars/${car.id}` };
     }
     default:
       return null;
@@ -40,7 +40,7 @@ const ICONS: Record<ActivityItem["type"], typeof CalendarCheck> = {
 
 export function ActivityFeed({ items }: { items: ActivityItem[] }) {
   if (items.length === 0) {
-    return <p className="text-body text-text-muted">Sin actividad reciente.</p>;
+    return <p className="text-body text-text-muted">No recent activity.</p>;
   }
 
   return (

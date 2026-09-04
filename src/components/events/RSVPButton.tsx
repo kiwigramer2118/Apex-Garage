@@ -42,7 +42,7 @@ export function RSVPButton({ eventId, full }: { eventId: string; full?: boolean 
           className="flex items-center gap-2"
         >
           {attending && <Check size={16} strokeWidth={2} />}
-          {attending ? "Vas a asistir" : "Confirmar asistencia"}
+          {attending ? "You're going" : "RSVP"}
         </motion.span>
       </AnimatePresence>
 

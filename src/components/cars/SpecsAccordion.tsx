@@ -6,12 +6,12 @@ import { ChevronDown } from "lucide-react";
 import type { CarModCategory, CarSpecs } from "@/types";
 
 const SPEC_LABELS: { key: keyof CarSpecs; label: string }[] = [
-  { key: "power", label: "Potencia" },
-  { key: "weight", label: "Peso" },
-  { key: "drivetrain", label: "Tracción" },
-  { key: "transmission", label: "Transmisión" },
-  { key: "tires", label: "Llantas" },
-  { key: "suspension", label: "Suspensión" },
+  { key: "power", label: "Power" },
+  { key: "weight", label: "Weight" },
+  { key: "drivetrain", label: "Drivetrain" },
+  { key: "transmission", label: "Transmission" },
+  { key: "tires", label: "Tires" },
+  { key: "suspension", label: "Suspension" },
 ];
 
 function AccordionSection({

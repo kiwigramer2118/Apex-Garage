@@ -60,13 +60,13 @@ export function CreateListingForm({
       priceUsd: Number(price),
       negotiable,
       location: currentUser.location,
-      description: description.trim() || "Sin descripción todavía.",
+      description: description.trim() || "No description yet.",
       images: [
         `https://picsum.photos/seed/${slugify(title)}-1/1200/900`,
         `https://picsum.photos/seed/${slugify(title)}-2/1200/900`,
       ],
       sellerId: CURRENT_USER_ID,
-      fitment: fitment.trim() || "Consultar con el vendedor",
+      fitment: fitment.trim() || "Ask seller for fitment",
       postedAt: new Date().toISOString().slice(0, 10),
       carId: carId || null,
     };
@@ -78,22 +78,22 @@ export function CreateListingForm({
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <button type="button" onClick={onBack} className="flex items-center gap-1 text-caption text-text-muted">
-        <ChevronLeft size={15} /> Volver
+        <ChevronLeft size={15} /> Back
       </button>
-      <h1 className="font-display text-title text-text-primary">Nuevo clasificado</h1>
+      <h1 className="font-display text-title text-text-primary">New listing</h1>
 
-      <FormField label="Título">
+      <FormField label="Title">
         <input
           className={inputClass}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="Ej. Volk TE37 17x9 — Set de 4"
+          placeholder="E.g. Volk TE37 17x9 — Set of 4"
           required
         />
       </FormField>
 
       <div className="grid grid-cols-2 gap-3">
-        <FormField label="Categoría">
+        <FormField label="Category">
           <select
             className={inputClass}
             value={category}
@@ -106,7 +106,7 @@ export function CreateListingForm({
             ))}
           </select>
         </FormField>
-        <FormField label="Condición">
+        <FormField label="Condition">
           <select
             className={inputClass}
             value={condition}
@@ -122,7 +122,7 @@ export function CreateListingForm({
       </div>
 
       <div className="grid grid-cols-2 gap-3">
-        <FormField label="Precio (USD)">
+        <FormField label="Price (USD)">
           <input
             className={inputClass}
             type="number"
@@ -140,7 +140,7 @@ export function CreateListingForm({
             onChange={(e) => setNegotiable(e.target.checked)}
             className="h-4 w-4 accent-accent"
           />
-          <span className="text-body text-text-secondary">Negociable</span>
+          <span className="text-body text-text-secondary">Negotiable</span>
         </label>
       </div>
 
@@ -149,14 +149,14 @@ export function CreateListingForm({
           className={inputClass}
           value={fitment}
           onChange={(e) => setFitment(e.target.value)}
-          placeholder="Ej. 5x114.3, BMW E46"
+          placeholder="E.g. 5x114.3, BMW E46"
         />
       </FormField>
 
       {myCars.length > 0 && (
-        <FormField label="Vincular a uno de tus autos (opcional)">
+        <FormField label="Link to one of your cars (optional)">
           <select className={inputClass} value={carId} onChange={(e) => setCarId(e.target.value)}>
-            <option value="">Ninguno</option>
+            <option value="">None</option>
             {myCars.map((c) => (
               <option key={c.id} value={c.id}>
                 {c.year} {c.make} {c.model}
@@ -166,13 +166,13 @@ export function CreateListingForm({
         </FormField>
       )}
 
-      <FormField label="Descripción">
+      <FormField label="Description">
         <textarea
           className={inputClass}
           rows={4}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          placeholder="Estado, tiempo de uso, razón de venta…"
+          placeholder="Condition, time in use, reason for selling…"
         />
       </FormField>
 
@@ -181,7 +181,7 @@ export function CreateListingForm({
         disabled={!canSubmit}
         className="mt-2 w-full rounded-button bg-accent py-3.5 text-body text-onaccent transition-colors duration-150 hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Publicar clasificado
+        Publish listing
       </button>
     </form>
   );
